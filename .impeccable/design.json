@@ -1,0 +1,713 @@
+{
+ "schemaVersion": 2,
+ "generatedAt": "2026-09-06T00:00:00.000Z",
+ "title": "Design System: Victor Gonçalves — Letreiro Luminoso",
+ "extensions": {
+  "colorMeta": {
+   "night": {
+    "role": "neutral",
+    "displayName": "Night",
+    "canonical": "#061426",
+    "tonalRamp": [
+     "#02070E",
+     "#061426",
+     "#0A1E36",
+     "#103352",
+     "#1A5188",
+     "#3B7FBE",
+     "#7BB0DE",
+     "#C8E0F4"
+    ]
+   },
+   "wall": {
+    "role": "neutral",
+    "displayName": "Petrol Wall",
+    "canonical": "#0D2038",
+    "tonalRamp": [
+     "#040B15",
+     "#0D2038",
+     "#12304F",
+     "#184268",
+     "#2160A0",
+     "#4A8CCB",
+     "#89B8E4",
+     "#CFE4F6"
+    ]
+   },
+   "wall-up": {
+    "role": "neutral",
+    "displayName": "Wall Upper",
+    "canonical": "#113052",
+    "tonalRamp": [
+     "#050F1C",
+     "#0A1F36",
+     "#113052",
+     "#17436F",
+     "#215FA0",
+     "#4A8BCC",
+     "#88B7E5",
+     "#CEE3F7"
+    ]
+   },
+   "wall-lit": {
+    "role": "neutral",
+    "displayName": "Wall Under Light",
+    "canonical": "#17406B",
+    "tonalRamp": [
+     "#071426",
+     "#0C2440",
+     "#113356",
+     "#17406B",
+     "#215B96",
+     "#3F82C4",
+     "#7FAFE0",
+     "#C6DFF5"
+    ]
+   },
+   "profile": {
+    "role": "tertiary",
+    "displayName": "Aluminium Profile",
+    "canonical": "#22406A",
+    "tonalRamp": [
+     "#0A1524",
+     "#12253D",
+     "#1A3354",
+     "#22406A",
+     "#2E5891",
+     "#4E7099",
+     "#8AA6C8",
+     "#D2E0EF"
+    ]
+   },
+   "profile-hi": {
+    "role": "tertiary",
+    "displayName": "Profile Highlight",
+    "canonical": "#4E7099",
+    "tonalRamp": [
+     "#111A24",
+     "#1D2E42",
+     "#2A445F",
+     "#3A5A7C",
+     "#4E7099",
+     "#7695B7",
+     "#A4BBD3",
+     "#D6E2EE"
+    ]
+   },
+   "profile-lo": {
+    "role": "tertiary",
+    "displayName": "Profile Shadow",
+    "canonical": "#060D18",
+    "tonalRamp": [
+     "#03060B",
+     "#060D18",
+     "#0B1728",
+     "#12253E",
+     "#1D3C63",
+     "#33629B",
+     "#6E9BCB",
+     "#BCD5EC"
+    ]
+   },
+   "profile-up": {
+    "role": "tertiary",
+    "displayName": "Profile Hover",
+    "canonical": "#26405F",
+    "tonalRamp": [
+     "#0B1220",
+     "#141F30",
+     "#1D2F47",
+     "#26405F",
+     "#345A85",
+     "#537FAF",
+     "#8CACCC",
+     "#D0DFEC"
+    ]
+   },
+   "pin": {
+    "role": "tertiary",
+    "displayName": "Standoff Pin",
+    "canonical": "#8AA6C8",
+    "tonalRamp": [
+     "#141C27",
+     "#22303F",
+     "#33465C",
+     "#48607B",
+     "#61799A",
+     "#8AA6C8",
+     "#B4C8DF",
+     "#DEE8F3"
+    ]
+   },
+   "acryl-off": {
+    "role": "secondary",
+    "displayName": "Unlit Acrylic",
+    "canonical": "#14243C",
+    "tonalRamp": [
+     "#060B13",
+     "#0D1727",
+     "#14243C",
+     "#1D3455",
+     "#2A4C7C",
+     "#4477B4",
+     "#82A9D8",
+     "#C7DBF0"
+    ]
+   },
+   "acryl-on": {
+    "role": "secondary",
+    "displayName": "Lit Acrylic",
+    "canonical": "#EAF3FF",
+    "tonalRamp": [
+     "#0B1926",
+     "#153048",
+     "#20496C",
+     "#2E6698",
+     "#4A8AC4",
+     "#7FB2DE",
+     "#B8D5F2",
+     "#EAF3FF"
+    ]
+   },
+   "led": {
+    "role": "primary",
+    "displayName": "Sign LED Blue",
+    "canonical": "#2F86FF",
+    "tonalRamp": [
+     "#04162E",
+     "#082849",
+     "#0D3D73",
+     "#1355A3",
+     "#1B6CD1",
+     "#2F86FF",
+     "#79B2FF",
+     "#C4DCFF"
+    ]
+   },
+   "led-hot": {
+    "role": "primary",
+    "displayName": "Hot Filament",
+    "canonical": "#8ADBFF",
+    "tonalRamp": [
+     "#062231",
+     "#0A3852",
+     "#0F5178",
+     "#166FA3",
+     "#2093CE",
+     "#4DB6EC",
+     "#8ADBFF",
+     "#D2F1FF"
+    ]
+   },
+   "led-deep": {
+    "role": "primary",
+    "displayName": "LED Deep",
+    "canonical": "#1655B8",
+    "tonalRamp": [
+     "#040F22",
+     "#071B3D",
+     "#0B2B5E",
+     "#0F3E86",
+     "#1655B8",
+     "#2E7BE4",
+     "#72A9F2",
+     "#C0D9FA"
+    ]
+   },
+   "vinyl": {
+    "role": "neutral",
+    "displayName": "Vinyl White",
+    "canonical": "#F2F7FF",
+    "tonalRamp": [
+     "#0C141F",
+     "#172436",
+     "#243750",
+     "#354E6E",
+     "#4E6E92",
+     "#7C99BB",
+     "#B6C9DE",
+     "#F2F7FF"
+    ]
+   },
+   "ink": {
+    "role": "neutral",
+    "displayName": "Ink",
+    "canonical": "#C6D6EC",
+    "tonalRamp": [
+     "#0D131C",
+     "#18222F",
+     "#263548",
+     "#3A4D67",
+     "#556C89",
+     "#7B93B2",
+     "#A3B7D0",
+     "#C6D6EC"
+    ]
+   },
+   "ink-dim": {
+    "role": "neutral",
+    "displayName": "Ink Dim",
+    "canonical": "#93A9C6",
+    "tonalRamp": [
+     "#0E1319",
+     "#1A222D",
+     "#283445",
+     "#3B4B60",
+     "#54677F",
+     "#71879F",
+     "#93A9C6",
+     "#CBD8E7"
+    ]
+   },
+   "ink-on-lit": {
+    "role": "neutral",
+    "displayName": "Ink on Lit Acrylic",
+    "canonical": "#061020",
+    "tonalRamp": [
+     "#02060C",
+     "#061020",
+     "#0B1D38",
+     "#123057",
+     "#1C4A83",
+     "#3474BC",
+     "#74A5DA",
+     "#C1D8F0"
+    ]
+   },
+   "thread": {
+    "role": "tertiary",
+    "displayName": "Top-Edge Light Thread",
+    "canonical": "rgb(190 224 255 / .17)",
+    "tonalRamp": [
+     "#0B141D",
+     "#152535",
+     "#213A52",
+     "#325675",
+     "#4B789C",
+     "#7BA3C4",
+     "#AECBE4",
+     "#BEE0FF"
+    ]
+   },
+   "thread-lo": {
+    "role": "tertiary",
+    "displayName": "Under-Edge Thread",
+    "canonical": "rgb(120 176 235 / .16)",
+    "tonalRamp": [
+     "#08131E",
+     "#0F2436",
+     "#183851",
+     "#245071",
+     "#356F98",
+     "#5292C2",
+     "#78B0EB",
+     "#BCD9F6"
+    ]
+   },
+   "fillet": {
+    "role": "tertiary",
+    "displayName": "Plate Fillet",
+    "canonical": "rgb(120 176 235 / .2)",
+    "tonalRamp": [
+     "#08131E",
+     "#0F2436",
+     "#183851",
+     "#245071",
+     "#356F98",
+     "#5292C2",
+     "#78B0EB",
+     "#BCD9F6"
+    ]
+   },
+   "edge-lit": {
+    "role": "tertiary",
+    "displayName": "Lit Edge",
+    "canonical": "rgb(80 165 255 / .62)"
+   },
+   "edge-lit-2": {
+    "role": "tertiary",
+    "displayName": "Lit Edge Soft",
+    "canonical": "rgb(80 165 255 / .32)"
+   },
+   "edge-off": {
+    "role": "tertiary",
+    "displayName": "Unlit Edge",
+    "canonical": "rgb(90 130 180 / .22)"
+   },
+   "face-on-1": {
+    "role": "secondary",
+    "displayName": "Lit Face Top",
+    "canonical": "#1E4F8C"
+   },
+   "face-on-2": {
+    "role": "secondary",
+    "displayName": "Lit Face Bottom",
+    "canonical": "#14355E"
+   },
+   "face-off-1": {
+    "role": "neutral",
+    "displayName": "Unlit Face Top",
+    "canonical": "#0A1A2E"
+   },
+   "face-off-2": {
+    "role": "neutral",
+    "displayName": "Unlit Face Bottom",
+    "canonical": "#071322"
+   },
+   "ink-on-face": {
+    "role": "neutral",
+    "displayName": "Ink On Unlit Face",
+    "canonical": "#93B7E0"
+   },
+   "plate-1": {
+    "role": "secondary",
+    "displayName": "Word Plate Top",
+    "canonical": "rgb(46 118 205 / .58)"
+   },
+   "plate-2": {
+    "role": "secondary",
+    "displayName": "Word Plate Bottom",
+    "canonical": "rgb(24 72 138 / .5)"
+   },
+   "plate-edge": {
+    "role": "tertiary",
+    "displayName": "Word Plate Fillet",
+    "canonical": "rgb(150 205 255 / .45)"
+   },
+   "alert": {
+    "role": "tertiary",
+    "displayName": "Alert Coral",
+    "canonical": "#FF8A8A"
+   },
+   "alert-ink": {
+    "role": "tertiary",
+    "displayName": "Alert Ink",
+    "canonical": "#FFB4B4"
+   },
+   "alert-deep": {
+    "role": "tertiary",
+    "displayName": "Alert Deep",
+    "canonical": "#2A0808"
+   },
+   "alert-ring": {
+    "role": "tertiary",
+    "displayName": "Alert Ring",
+    "canonical": "rgb(255 138 138 / .16)"
+   },
+   "wa-1": {
+    "role": "tertiary",
+    "displayName": "WhatsApp Green",
+    "canonical": "#2FC24E"
+   },
+   "wa-2": {
+    "role": "tertiary",
+    "displayName": "WhatsApp Green Deep",
+    "canonical": "#1BA33C"
+   },
+   "wa-ink": {
+    "role": "tertiary",
+    "displayName": "WhatsApp Ink",
+    "canonical": "#04140A"
+   },
+   "wa-rim": {
+    "role": "tertiary",
+    "displayName": "WhatsApp Rim",
+    "canonical": "rgb(16 44 30 / .55)"
+   }
+  },
+  "typographyMeta": {
+   "display": {
+    "displayName": "Fabricated Letter — Display",
+    "purpose": "Hero H1 only. Weight 800, width 112%, tracking -.035em, text-wrap balance."
+   },
+   "headline": {
+    "displayName": "Fabricated Letter — Headline",
+    "purpose": "Every section H2. Weight 800, width 106%."
+   },
+   "title": {
+    "displayName": "Title",
+    "purpose": "H3 across marks, perks, stages and FAQ questions."
+   },
+   "lede": {
+    "displayName": "Lede",
+    "purpose": "Section intros and the hero subheadline, capped 46-56ch."
+   },
+   "body": {
+    "displayName": "Body",
+    "purpose": "Default prose at line-height 1.62; long-copy blocks capped at 68ch, grids never capped."
+   },
+   "label": {
+    "displayName": "Vinyl Cut — Label",
+    "purpose": "Uppercase condensed legend: trust seals, field labels, chips, footer headings. 0.72rem is the functional floor."
+   }
+  },
+  "shadows": [
+   {
+    "name": "edge",
+    "value": "inset 0 1px 0 rgb(190 224 255 / .17), inset 0 -1px 0 rgb(0 0 0 / .5)",
+    "purpose": "The aluminium extrusion: light thread on the top arête, shadow at the base. Present on every fabricated surface."
+   },
+   {
+    "name": "lift-1",
+    "value": "0 2px 6px rgb(2 6 14 / .5), 0 10px 24px -12px rgb(2 6 14 / .7)",
+    "purpose": "Standard standoff from the wall. Cards, plates and chips at rest."
+   },
+   {
+    "name": "lift-2",
+    "value": "0 4px 12px rgb(2 6 14 / .55), 0 22px 48px -20px rgb(2 6 14 / .8)",
+    "purpose": "Deeper standoff: portrait panel, form plate, and any card on hover."
+   },
+   {
+    "name": "halo",
+    "value": "0 14px 40px -14px rgb(47 134 255 / .38)",
+    "purpose": "Light escaping a lit panel onto the wall behind. Short, blue, displaced downward — never centred."
+   },
+   {
+    "name": "halo-hot",
+    "value": "0 18px 54px -14px rgb(47 134 255 / .62)",
+    "purpose": "The lit plan face and the primary CTA on hover."
+   },
+   {
+    "name": "emitter-dot",
+    "value": "0 0 8px 1px rgb(47 134 255 / .8)",
+    "purpose": "The ONLY zero-offset glow permitted, and only on genuine point emitters of 9px or less."
+   }
+  ],
+  "motion": [
+   {
+    "name": "ease",
+    "value": "cubic-bezier(.16, .84, .34, 1)",
+    "purpose": "The single easing curve for every transition and keyframe in the build."
+   },
+   {
+    "name": "dur",
+    "value": "0.42s",
+    "purpose": "Base duration; menu slide and shutter transform use it directly."
+   },
+   {
+    "name": "light-up",
+    "value": "opacity .7s, transform .7s (18px rise), filter .7s (brightness .72 -> 1)",
+    "purpose": "The one authored gesture: elements light up on entering view. JS adds data-lit, then .is-on, then removes both so nothing can strand invisible."
+   },
+   {
+    "name": "stage-stagger",
+    "value": "140ms per item",
+    "purpose": "The five process stages light in sequence and STAY lit, because there the sequence is the information."
+   },
+   {
+    "name": "breathe",
+    "value": "3.4s infinite ring scale(1) -> scale(1.45) fade",
+    "purpose": "Slow pulse on the WhatsApp housing: a breath, not a blink. Disabled under reduced motion."
+   },
+   {
+    "name": "hover-lift",
+    "value": "translateY(-4px) cards / translateY(-2px) buttons",
+    "purpose": "Hover raises a surface and swaps lift-1 for lift-2 plus halo."
+   }
+  ],
+  "breakpoints": [
+   {
+    "name": "phone-large",
+    "value": "30em"
+   },
+   {
+    "name": "phone-landscape",
+    "value": "40em"
+   },
+   {
+    "name": "tablet",
+    "value": "48em"
+   },
+   {
+    "name": "laptop",
+    "value": "64em"
+   },
+   {
+    "name": "desktop",
+    "value": "80em"
+   },
+   {
+    "name": "ultrawide",
+    "value": "100em"
+   },
+   {
+    "name": "shutter-menu-ceiling",
+    "value": "max-width: 1023.98px"
+   }
+  ]
+ },
+ "components": [
+  {
+   "name": "Lit Acrylic Button",
+   "kind": "button",
+   "refersTo": "button-lit",
+   "description": "Primary CTA. A lit acrylic face with an aluminium edge and a short displaced halo on the wall behind.",
+   "html": "<a class=\"ds-btn ds-btn-lit\" href=\"#\">Quero meu site<svg class=\"ds-i\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h13M13 6l6 6-6 6\"/></svg></a>",
+   "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .95rem 1.6rem; min-height: 3rem; font-family: 'Archivo', system-ui, sans-serif; font-size: .95rem; font-weight: 700; font-stretch: 100%; letter-spacing: -.005em; border: 0; border-radius: 5px; text-decoration: none; cursor: pointer; transition: transform .22s cubic-bezier(.16,.84,.34,1), box-shadow .28s cubic-bezier(.16,.84,.34,1); } .ds-i { width: 1.05rem; height: 1.05rem; } .ds-btn-lit { background: linear-gradient(180deg, #FFFFFF, #EAF3FF 62%, #CFE2F8); color: #061020; box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), inset 0 -1px 0 rgb(0 0 0 / .5), 0 2px 6px rgb(2 6 14 / .5), 0 10px 24px -12px rgb(2 6 14 / .7), 0 14px 40px -14px rgb(47 134 255 / .38); } .ds-btn-lit:hover { transform: translateY(-2px); box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), inset 0 -1px 0 rgb(0 0 0 / .5), 0 4px 12px rgb(2 6 14 / .55), 0 22px 48px -20px rgb(2 6 14 / .8), 0 18px 54px -14px rgb(47 134 255 / .62); } .ds-btn-lit:active { transform: translateY(0); } .ds-btn-lit:focus-visible { outline: 2px solid #8ADBFF; outline-offset: 3px; }"
+  },
+  {
+   "name": "Vinyl Outline Button",
+   "kind": "button",
+   "refersTo": "button-vinyl",
+   "description": "Secondary CTA. Cut vinyl outline: no fill beyond a dark ground, lighting to LED blue on hover.",
+   "html": "<a class=\"ds-btn ds-btn-vinyl\" href=\"#\">Ver projetos</a>",
+   "css": ".ds-btn-vinyl { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; padding: .95rem 1.6rem; min-height: 3rem; font-family: 'Archivo', system-ui, sans-serif; font-size: .95rem; font-weight: 700; letter-spacing: -.005em; text-decoration: none; color: #F2F7FF; background: rgb(10 21 36 / .5); border: 1px solid rgb(78 112 153 / .5); border-radius: 5px; cursor: pointer; box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), inset 0 -1px 0 rgb(0 0 0 / .5); transition: transform .22s cubic-bezier(.16,.84,.34,1), color .22s, border-color .22s, background-color .22s; } .ds-btn-vinyl:hover { border-color: #2F86FF; color: #8ADBFF; background: rgb(23 64 107 / .7); transform: translateY(-2px); } .ds-btn-vinyl:active { transform: translateY(0); } .ds-btn-vinyl:focus-visible { outline: 2px solid #8ADBFF; outline-offset: 3px; }"
+  },
+  {
+   "name": "Vinyl Chip",
+   "kind": "chip",
+   "refersTo": "chip",
+   "description": "Uppercase condensed label cut from vinyl and applied to a dark plate. Used for skills and, below a heading, for project categories.",
+   "html": "<span class=\"ds-chip\">Landing Page</span>",
+   "css": ".ds-chip { display: inline-block; padding: .38rem .8rem; font-family: 'Archivo', system-ui, sans-serif; font-size: .72rem; font-weight: 700; font-stretch: 88%; letter-spacing: .1em; text-transform: uppercase; color: #93A9C6; background: rgb(10 21 36 / .6); border: 1px solid rgb(78 112 153 / .32); border-radius: 3px; box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), inset 0 -1px 0 rgb(0 0 0 / .5); transition: color .22s cubic-bezier(.16,.84,.34,1), border-color .22s cubic-bezier(.16,.84,.34,1); } .ds-chip:hover { color: #8ADBFF; border-color: rgb(47 134 255 / .5); }"
+  },
+  {
+   "name": "Recessed Field",
+   "kind": "input",
+   "refersTo": "input-field",
+   "description": "Form input set into the plate: dark recessed ground, aluminium hairline, vinyl-cut label, LED focus ring.",
+   "html": "<div class=\"ds-field\"><label class=\"ds-label\" for=\"ds-nome\">Nome</label><input class=\"ds-input\" id=\"ds-nome\" type=\"text\" placeholder=\"Seu nome\"></div>",
+   "css": ".ds-field { display: grid; gap: .45rem; font-family: 'Archivo', system-ui, sans-serif; } .ds-label { font-size: .72rem; font-weight: 700; font-stretch: 86%; letter-spacing: .14em; text-transform: uppercase; color: #93A9C6; } .ds-input { width: 100%; padding: .8rem .9rem; min-height: 2.9rem; font: inherit; font-size: 1rem; color: #F2F7FF; background: rgb(5 14 26 / .72); border: 1px solid rgb(78 112 153 / .32); border-radius: 5px; box-shadow: inset 0 1px 2px rgb(0 0 0 / .35); caret-color: #8ADBFF; transition: border-color .22s cubic-bezier(.16,.84,.34,1), box-shadow .22s cubic-bezier(.16,.84,.34,1); } .ds-input::placeholder { color: #7C93B2; opacity: 1; } .ds-input:hover { border-color: rgb(78 112 153 / .55); } .ds-input:focus { outline: none; border-color: #2F86FF; box-shadow: inset 0 1px 2px rgb(0 0 0 / .35), 0 0 0 3px rgb(47 134 255 / .22); }"
+  },
+  {
+   "name": "Fascia Navbar",
+   "kind": "nav",
+   "refersTo": null,
+   "description": "The aluminium fascia band with a light thread on its top edge and an LED strip that scales in under each link.",
+   "html": "<header class=\"ds-fascia\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-pin\"></span>Victor Gonçalves</a><nav><ul class=\"ds-navlist\"><li><a class=\"ds-navlink ds-is-current\" href=\"#\">Início</a></li><li><a class=\"ds-navlink\" href=\"#\">Projetos</a></li><li><a class=\"ds-navlink\" href=\"#\">Planos</a></li></ul></nav></header>",
+   "css": ".ds-fascia { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 1.5rem; font-family: 'Archivo', system-ui, sans-serif; background: linear-gradient(180deg, rgb(17 40 70 / .55), rgb(9 22 40 / .3)); box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), 0 1px 0 rgb(120 176 235 / .16); } .ds-brand { display: inline-flex; align-items: center; gap: .6rem; font-size: 1.02rem; font-weight: 800; font-stretch: 108%; letter-spacing: -.025em; color: #F2F7FF; text-decoration: none; } .ds-pin { width: 9px; height: 9px; border-radius: 50%; background: #8ADBFF; box-shadow: 0 0 0 3px rgb(47 134 255 / .18), 0 0 12px 1px rgb(47 134 255 / .7); flex: none; } .ds-navlist { display: flex; align-items: center; gap: 1.7rem; list-style: none; margin: 0; padding: 0; } .ds-navlink { position: relative; display: block; padding: .4rem 0; font-size: .95rem; font-weight: 500; color: #C6D6EC; text-decoration: none; transition: color .22s cubic-bezier(.16,.84,.34,1); } .ds-navlink::after { content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; border-radius: 2px; background: linear-gradient(90deg, #2F86FF, #8ADBFF); box-shadow: 0 0 10px rgb(47 134 255 / .8); transform: scaleX(0); transform-origin: left; transition: transform .3s cubic-bezier(.16,.84,.34,1); } .ds-navlink:hover { color: #F2F7FF; } .ds-navlink:hover::after, .ds-navlink:focus-visible::after, .ds-is-current::after { transform: scaleX(1); } .ds-is-current { color: #F2F7FF; }"
+  },
+  {
+   "name": "Panel Card",
+   "kind": "card",
+   "refersTo": null,
+   "description": "The default standing panel: aluminium hairline, wall-gradient face, edge plus lift; hover raises it and lights a halo on the wall.",
+   "html": "<article class=\"ds-card\"><h3 class=\"ds-card-title\">Site institucional</h3><p class=\"ds-card-desc\">Uma fachada digital com acabamento real, entregue pronta para publicar.</p></article>",
+   "css": ".ds-card { padding: 1.5rem; font-family: 'Archivo', system-ui, sans-serif; border: 1px solid rgb(78 112 153 / .24); border-radius: 8px; background: linear-gradient(180deg, rgb(19 42 70 / .7), rgb(10 24 42 / .7)); box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), inset 0 -1px 0 rgb(0 0 0 / .5), 0 2px 6px rgb(2 6 14 / .5), 0 10px 24px -12px rgb(2 6 14 / .7); transition: transform .34s cubic-bezier(.16,.84,.34,1), box-shadow .34s cubic-bezier(.16,.84,.34,1), border-color .34s cubic-bezier(.16,.84,.34,1); } .ds-card:hover { transform: translateY(-4px); border-color: rgb(47 134 255 / .42); box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), inset 0 -1px 0 rgb(0 0 0 / .5), 0 4px 12px rgb(2 6 14 / .55), 0 22px 48px -20px rgb(2 6 14 / .8), 0 14px 40px -14px rgb(47 134 255 / .38); } .ds-card-title { margin: 0 0 .5rem; font-size: 1.3rem; font-weight: 800; letter-spacing: -.02em; color: #F2F7FF; } .ds-card-desc { margin: 0; font-size: .875rem; line-height: 1.62; color: #93A9C6; max-width: 48ch; }"
+  },
+  {
+   "name": "Lit Plan Face",
+   "kind": "custom",
+   "refersTo": "panel-lit",
+   "description": "The signature component: one lit sign in a row of unlit ones. Lit face brighter than the wall, hot halo, stamped violator seal breaking the top border, standoff pin at the corner.",
+   "html": "<article class=\"ds-plan ds-plan-on\"><span class=\"ds-violator\">Mais escolhido</span><h3 class=\"ds-plan-name\">Pro</h3><p class=\"ds-plan-price\"><span class=\"ds-plan-cur\">R$</span><span class=\"ds-plan-val\">1.890</span></p><p class=\"ds-plan-note\">Pagamento único</p><ul class=\"ds-plan-list\"><li>Até 8 seções</li><li>Formulário com WhatsApp</li><li>Publicação e domínio</li></ul></article>",
+   "css": ".ds-plan { position: relative; display: flex; flex-direction: column; padding: 2.1rem; font-family: 'Archivo', system-ui, sans-serif; border-radius: 8px; border: 1px solid rgb(80 165 255 / .62); background: linear-gradient(180deg, #1E4F8C, #14355E); box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), inset 0 -1px 0 rgb(0 0 0 / .5), 0 4px 12px rgb(2 6 14 / .55), 0 22px 48px -20px rgb(2 6 14 / .8), 0 18px 54px -14px rgb(47 134 255 / .62); transition: transform .34s cubic-bezier(.16,.84,.34,1), box-shadow .34s cubic-bezier(.16,.84,.34,1); } .ds-plan::before { content: ''; position: absolute; top: 11px; left: 11px; width: 6px; height: 6px; border-radius: 50%; background: linear-gradient(180deg, #8AA6C8, #2A4363); box-shadow: 0 1px 2px rgb(0 0 0 / .6); } .ds-plan:hover { transform: translateY(-4px); box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), inset 0 -1px 0 rgb(0 0 0 / .5), 0 4px 12px rgb(2 6 14 / .55), 0 22px 66px -14px rgb(47 134 255 / .75); } .ds-violator { position: absolute; top: -.85rem; right: 1.4rem; padding: .35rem .8rem; font-size: .72rem; font-weight: 800; font-stretch: 88%; letter-spacing: .14em; text-transform: uppercase; color: #061020; background: linear-gradient(180deg, #FFFFFF, #EAF3FF 60%, #C9DEF7); border-radius: 3px; box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), 0 2px 6px rgb(2 6 14 / .5), 0 14px 40px -14px rgb(47 134 255 / .38); transform: rotate(-1.4deg); white-space: nowrap; } .ds-plan-name { margin: 0; font-size: 1.3rem; font-weight: 800; font-stretch: 104%; letter-spacing: -.025em; color: #FFFFFF; } .ds-plan-price { display: flex; align-items: baseline; gap: .22rem; margin: 1.5rem 0 0; color: #F2F7FF; font-variant-numeric: tabular-nums; } .ds-plan-cur { font-size: 1.02rem; font-weight: 600; color: #BCD6F4; } .ds-plan-val { font-size: 2.6rem; font-weight: 800; font-stretch: 96%; letter-spacing: -.04em; line-height: 1; } .ds-plan-note { margin: .5rem 0 0; font-size: .72rem; font-weight: 700; font-stretch: 86%; letter-spacing: .14em; text-transform: uppercase; color: #BCD6F4; } .ds-plan-list { display: grid; gap: .65rem; margin: 1.5rem 0 0; padding: 0; list-style: none; font-size: .875rem; color: #EAF3FF; } .ds-plan-list li { display: flex; gap: .6rem; align-items: flex-start; } .ds-plan-list li::before { content: ''; margin-top: .5rem; width: 6px; height: 6px; flex: none; border-radius: 50%; background: #8ADBFF; box-shadow: 0 0 7px rgb(47 134 255 / .75); }"
+  },
+  {
+   "name": "Unlit Plan Face",
+   "kind": "custom",
+   "refersTo": "panel-unlit",
+   "description": "The sign with its light off: face darker than the wall, no halo, recessed text — but a live, filled CTA, because the pushbutton still works.",
+   "html": "<article class=\"ds-planoff\"><h3 class=\"ds-planoff-name\">Essencial</h3><p class=\"ds-planoff-val\">R$ 990</p><a class=\"ds-planoff-cta\" href=\"#\">Contratar</a></article>",
+   "css": ".ds-planoff { position: relative; display: flex; flex-direction: column; gap: 1rem; padding: 2.1rem; font-family: 'Archivo', system-ui, sans-serif; border-radius: 8px; border: 1px solid rgb(90 130 180 / .22); background: linear-gradient(180deg, #0A1A2E, #071322); box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), inset 0 -1px 0 rgb(0 0 0 / .5), 0 2px 6px rgb(2 6 14 / .5), 0 10px 24px -12px rgb(2 6 14 / .7); transition: transform .34s cubic-bezier(.16,.84,.34,1), border-color .34s cubic-bezier(.16,.84,.34,1); } .ds-planoff::before { content: ''; position: absolute; top: 11px; left: 11px; width: 6px; height: 6px; border-radius: 50%; background: linear-gradient(180deg, #8AA6C8, #2A4363); box-shadow: 0 1px 2px rgb(0 0 0 / .6); } .ds-planoff:hover { transform: translateY(-4px); border-color: rgb(120 176 235 / .45); } .ds-planoff-name { margin: 0; font-size: 1.3rem; font-weight: 800; font-stretch: 104%; letter-spacing: -.025em; color: #C6D6EC; } .ds-planoff-val { margin: 0; font-size: 2.6rem; font-weight: 800; font-stretch: 96%; letter-spacing: -.04em; line-height: 1; color: #C6D6EC; font-variant-numeric: tabular-nums; } .ds-planoff-cta { display: flex; align-items: center; justify-content: center; margin-top: auto; padding: .95rem 1.6rem; min-height: 3rem; font-size: .95rem; font-weight: 700; text-decoration: none; color: #F2F7FF; background: rgb(23 56 96 / .85); border: 1px solid rgb(126 180 240 / .62); border-radius: 5px; box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), inset 0 -1px 0 rgb(0 0 0 / .5); transition: background-color .22s cubic-bezier(.16,.84,.34,1), border-color .22s cubic-bezier(.16,.84,.34,1); } .ds-planoff-cta:hover { border-color: #8ADBFF; background: rgb(30 79 140 / .95); color: #FFFFFF; } .ds-planoff-cta:focus-visible { outline: 2px solid #8ADBFF; outline-offset: 3px; }"
+  },
+  {
+   "name": "Lit Word Plate",
+   "kind": "custom",
+   "refersTo": null,
+   "description": "The hero's single lit word: a bounded wall plate behind the glyphs with a 1px fillet, an inset top thread and a displaced halo — plus .3em mounting clearance so the hard edge cannot clip its neighbours.",
+   "html": "<h1 class=\"ds-sign\">Seu negócio com uma <em class=\"ds-sign-lit\">fachada</em> digital</h1>",
+   "css": ".ds-sign { margin: 0; font-family: 'Archivo', system-ui, sans-serif; font-size: clamp(2.3rem, 6.2vw, 3.9rem); font-weight: 800; font-stretch: 112%; letter-spacing: -.035em; line-height: 1.03; color: #F2F7FF; text-wrap: balance; } .ds-sign-lit { font-style: normal; position: relative; isolation: isolate; margin-inline: .3em; color: #FFFFFF; text-shadow: 0 0 1px rgb(214 238 255 / .5); } .ds-sign-lit::before { content: ''; position: absolute; z-index: -1; inset: -.04em -.24em -.02em; border-radius: 3px; background: linear-gradient(180deg, rgb(46 118 205 / .58), rgb(24 72 138 / .5)); border: 1px solid rgb(150 205 255 / .45); box-shadow: inset 0 1px 0 rgb(210 236 255 / .5), 0 10px 26px -10px rgb(47 134 255 / .55); }"
+  },
+  {
+   "name": "Process Stage",
+   "kind": "custom",
+   "refersTo": null,
+   "description": "The one element that lights and stays lit: the numbered stage plate. Its .is-on state raises the numeral to hot filament and adds the halo.",
+   "html": "<div class=\"ds-stage ds-stage-on\"><span class=\"ds-stage-no\">01</span><h3 class=\"ds-stage-title\">Briefing</h3><p class=\"ds-stage-desc\">Uma conversa curta para entender o negócio e travar o escopo.</p></div>",
+   "css": ".ds-stage { position: relative; padding: 1.5rem; font-family: 'Archivo', system-ui, sans-serif; border-radius: 5px; border: 1px solid rgb(78 112 153 / .22); background: rgb(10 24 42 / .55); box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), inset 0 -1px 0 rgb(0 0 0 / .5), 0 2px 6px rgb(2 6 14 / .5), 0 10px 24px -12px rgb(2 6 14 / .7); transition: border-color .4s cubic-bezier(.16,.84,.34,1), background-color .4s cubic-bezier(.16,.84,.34,1), box-shadow .4s cubic-bezier(.16,.84,.34,1); } .ds-stage-on { border-color: rgb(47 134 255 / .4); background: rgb(23 64 107 / .6); box-shadow: inset 0 1px 0 rgb(190 224 255 / .17), inset 0 -1px 0 rgb(0 0 0 / .5), 0 2px 6px rgb(2 6 14 / .5), 0 10px 24px -12px rgb(2 6 14 / .7), 0 14px 40px -14px rgb(47 134 255 / .38); } .ds-stage-no { display: block; font-size: 1.6rem; font-weight: 800; font-stretch: 88%; letter-spacing: -.03em; color: rgb(78 112 153 / .55); font-variant-numeric: tabular-nums; transition: color .4s, text-shadow .4s; } .ds-stage-on .ds-stage-no { color: #8ADBFF; text-shadow: 0 0 18px rgb(47 134 255 / .55); } .ds-stage-title { margin: .5rem 0; font-size: 1.22rem; font-weight: 700; line-height: 1.3; color: #F2F7FF; } .ds-stage-desc { margin: 0; font-size: .875rem; line-height: 1.62; color: #93A9C6; }"
+  }
+ ],
+ "narrative": {
+  "northStar": "The Illuminated Storefront at Night",
+  "overview": "The page is a lit commercial sign mounted on a petrol-blue night wall. Every surface is a fabricated object: an acrylic face, an aluminium profile, a wall plate on standoff pins. The wall dominates — a fixed vertical gradient from near-black night through petrol blue and back, dusted with a 5%-opacity static SVG plaster noise. Nothing floats. The page's whole depth story is that panels stand proud of a wall and cast a short, directional halo onto it.\n\nThe system's governing physical law is that light is always bounded by a fabricated edge. A lit surface has a body (gradient face), a rim (1px border or inset thread), and a displaced halo behind it. Glow never leaves a glyph, never surrounds an element evenly, never sits in empty space. The single exception is a genuine point emitter — an LED no larger than 9px — where a zero-offset radial glow is what a real LED does. This is the difference between a fabricated sign and a neon website, and it is the rejection the whole build is organised around: the dark-SaaS hero with floating gradient orbs and stacked glass cards.\n\nDensity is generous and vertical: a max 76rem shell, section courses of clamp(4.5rem, 12vw, 9rem), and a 1px aluminium fillet drawn between consecutive courses instead of a border. Colour does almost no work — the palette is one blue in many values plus one white. Hierarchy is carried by whether a thing is lit, not by hue.",
+  "keyCharacteristics": [
+   "Petrol-blue night wall, never black; blue is the dominant surface, not an accent on dark.",
+   "Light bounded by an edge: acrylic face + aluminium profile + short displaced halo.",
+   "Two type registers only: fabricated letter (heavy, expanded) and vinyl cut (condensed, uppercase, wide-tracked).",
+   "Lit vs unlit is a load-bearing state, not decoration.",
+   "One motion idea: things light up as they enter view, then the animation state is removed.",
+   "No build step, no framework, no third-party request."
+  ],
+  "rules": [
+   {
+    "name": "The Bounded Light Rule",
+    "body": "Light is always contained by a fabricated edge: a face, a 1px rim or inset thread, and a displaced halo behind. Nothing emits loose glow into space. Zero-offset radial glow is permitted only on genuine point emitters ≤9px — the brand pin (9px), the trust-strip dots (5px), the plan bullet dots (6px), and the nav LED underline (2px).",
+    "section": "colors"
+   },
+   {
+    "name": "The One Blue Rule",
+    "body": "The palette is one blue in many values. New emphasis is made by lighting a surface or dimming it, never by introducing a new hue. The only non-blue colours in the system are the WhatsApp green of the floating CTA (a third-party brand identity, carried in its own fabricated aluminium housing) and the error reds (#FF8A8A / #FFB4B4).",
+    "section": "colors"
+   },
+   {
+    "name": "The Lit-State Rule",
+    "body": "Lit versus unlit carries meaning. The Pro plan is a lit face brighter than the wall; Essencial and Premium are unlit faces darker than the wall. That contrast is how \"most chosen\" is said. But an unlit plate's CTA stays a live filled control — the sign is off, the pushbutton still works.",
+    "section": "colors"
+   },
+   {
+    "name": "The Two Registers Rule",
+    "body": "Type is either a fabricated letter (weight ≥700, width ≥104%, letter-spacing ≤ −.02em) or a vinyl cut (weight ≥600, width ≤88%, letter-spacing ≥ .1em, uppercase). There is no third voice, and no mid-weight expanded uppercase.",
+    "section": "typography"
+   },
+   {
+    "name": "The Closed Ramp Rule",
+    "body": "The size ramp is tokens only, --fs-display down to --fs-label. Adding a size means adding a token, never a literal. --fs-label at 0.72rem (11.5px) is the functional floor; nothing functional goes below it. The one intentional exception is the browser-chrome caption inside the project miniatures (9px), which is a picture of a URL bar, not site text.",
+    "section": "typography"
+   },
+   {
+    "name": "The No-Eyebrow Rule",
+    "body": "A small uppercase label never sits above a heading. Where a project needs a category, it is a chip placed below the name (.work__cat).",
+    "section": "typography"
+   },
+   {
+    "name": "The No-Sticky Rule",
+    "body": "There is no position: sticky anywhere. The hero and contact sections need clipped overflow for their backgrounds, and clipped overflow annuls sticky in descendants. The only fixed elements are the fascia navbar, the WhatsApp CTA, the skip link, and the two wall layers.",
+    "section": "layout"
+   },
+   {
+    "name": "The Clip-Not-Hidden Rule",
+    "body": "Horizontal overflow on body is overflow-x: clip with an @supports not (overflow: clip) fallback to hidden. hidden makes body a scroll container; clip trims without that side effect.",
+    "section": "layout"
+   },
+   {
+    "name": "The Zero-Byte First Viewport Rule",
+    "body": "The hero's first frame is architectural, not a placeholder: .hero__fallback (pure CSS radial + linear gradients) plus .hero__conduit (inline data-URI SVG circuit motif) paint the complete first viewport before any media request. The video is a deferred enhancement that fades to opacity .52 only once playing. Do not replace this with a raster poster.",
+    "section": "layout"
+   },
+   {
+    "name": "The Displaced Halo Rule",
+    "body": "A halo is directional: positive Y-offset, negative spread, blue. A zero-offset blur around a panel is an orb and is refused. The hero's lit word carries this at panel scale — a bounded wall plate behind the glyphs with a 1px fillet border and an inset top thread, plus 0 10px 26px -10px of halo. It went through a review round precisely because a blurred version read as a floating orb. If someone softens that edge, the hero regresses to the thing this build refuses.",
+    "section": "elevation"
+   },
+   {
+    "name": "The Mounting Clearance Rule",
+    "body": "A plate with a hard edge needs physical clearance or it clips its neighbours. .sign__line em carries margin-inline: .3em for exactly this reason. Any new bounded inline plate needs the same clearance.",
+    "section": "elevation"
+   }
+  ],
+  "dos": [
+   "Do bound every light: a face, a 1px rim or inset thread, and a displaced halo. Compose shadows as var(--edge), var(--lift-N), var(--halo).",
+   "Do use zero-offset radial glow only on genuine point emitters ≤9px (brand pin, trust dots, bullet dots, nav LED).",
+   "Do say emphasis with lit-versus-unlit, not with a new hue. Keep unlit CTAs live, filled controls.",
+   "Do add a new size as a token in the --fs-* ramp; keep --fs-label (0.72rem) as the functional floor.",
+   "Do give any new bounded inline plate mounting clearance (margin-inline: .3em), so its hard edge cannot clip a neighbouring letter.",
+   "Do keep the two type registers: fabricated letter (heavy, expanded, tight) or vinyl cut (condensed, uppercase, wide-tracked).",
+   "Do paint any new above-the-fold surface at zero bytes first; treat media as a deferred enhancement layered over CSS.",
+   "Do keep animations self-erasing: add the start state, transition, then remove both the attribute and the class so nothing can strand invisible.",
+   "Do ship all icons as inline single-stroke SVG at 1.6 / 1.4 stroke-width.",
+   "Do group items that belong to one plate into a single bordered surface divided by 1px fillets."
+  ],
+  "donts": [
+   "Don't blur a light source itself. No text-shadow glow radiating off glyphs, no zero-offset panel glow, no floating orbs — the hero's lit word already failed review as a blurred version once.",
+   "Don't use position: sticky anywhere; the hero and contact sections clip their overflow and would annul it in descendants.",
+   "Don't use overflow-x: hidden on body; it makes body a scroll container.",
+   "Don't put an uppercase label above a heading. Category and status labels go below, as chips.",
+   "Don't borrow the .mini palettes (--acc/--pap/--gry/--tx/--tx2). They are pictures of other people's websites, not this site's surfaces, and they must never outrank the hero in brightness.",
+   "Don't introduce a font. One Archivo variable file, self-hosted, is the whole type system — no system display faces, no second family.",
+   "Don't add a build step, a framework, or a third-party request. Everything ships as static HTML, two stylesheets, and one script.",
+   "Don't make text below --fs-label functional, and don't place --ink-dim prose on the lighter .course--prazo band (it drops to 4.41:1; that band steps text up to --ink)."
+  ],
+  "assetProvenance": "No rasters were generated for this build. All images in assets/images/ are user-supplied studio portraits (three supplied, two used); assets/videos/ is likewise user-supplied. No image tool was involved, so there is no generation prompt to embed. Both videos ship by the user's explicit direction: video-1.mp4 (3840x2160, 15 s, 154 MB) is the hero background and video-2.mp4 (3840x2160, 10 s, 28 MB) backs the contact section. Neither is on the critical path -- the hero's first viewport is painted entirely in CSS and loading is deferred and connection-gated (nothing downloads on 3G, 2G or save-data; the contact video never loads below 640px) -- but re-encoding both to ~1080p is recorded as a launch prerequisite in README.md and PRODUCT.md."
+ }
+}

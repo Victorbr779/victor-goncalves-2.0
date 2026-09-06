@@ -1,0 +1,92 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "#ffffff on #17958c",
+        "createdAt": "2026-09-06T22:03:06.853Z",
+        "reason": "Claude: botao dentro de .mini — miniatura de site de cliente ficticio, aria-hidden. E imagem de um site alheio, nao UI desta pagina. Auditoria de contraste computada na arvore real: zero falhas."
+      },
+      {
+        "rule": "low-contrast",
+        "value": "#ffffff on #a9763f",
+        "createdAt": "2026-09-06T22:03:06.986Z",
+        "reason": "Claude: botao dentro de .mini — miniatura de site de cliente ficticio, aria-hidden. E imagem de um site alheio, nao UI desta pagina. Auditoria de contraste computada na arvore real: zero falhas."
+      },
+      {
+        "rule": "low-contrast",
+        "value": "#ffffff on #3d7fe8",
+        "createdAt": "2026-09-06T22:03:07.103Z",
+        "reason": "Claude: botao dentro de .mini — miniatura de site de cliente ficticio, aria-hidden. E imagem de um site alheio, nao UI desta pagina. Auditoria de contraste computada na arvore real: zero falhas."
+      },
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-06T22:03:07.212Z",
+        "reason": "Claude: emissores pontuais do mundo letreiro (pino da marca, pontos da regua, marcadores de plano, fita LED). DESIGN.md canoniza como The Bounded Light Rule: brilho sem deslocamento so em emissor <=9px."
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-06T22:03:07.315Z",
+        "reason": "Claude: falso positivo — o detector nao resolve clamp(). Verificado nas capturas dos dois viewports, nada encostado na borda."
+      },
+      {
+        "rule": "clipped-overflow-container",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-06T22:03:07.425Z",
+        "reason": "Claude: deliberado — overflow-x:clip (nao hidden) no body, para recortar sem virar contexto de rolagem. DESIGN.md: The Clip-Not-Hidden Rule."
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-06T22:03:07.535Z",
+        "reason": "Claude: laminas da porta de enrolar no menu mobile — motivo do proprio mundo."
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "border-radius: 1.2cqi",
+        "createdAt": "2026-09-06T22:03:07.643Z",
+        "reason": "Claude: dentro de .mini — miniatura dimensionada em unidades de container para escalar com a vitrine. DESIGN.md registra como componente isolado."
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "border-radius: 1.4cqi",
+        "createdAt": "2026-09-06T22:03:07.768Z",
+        "reason": "Claude: dentro de .mini — miniatura dimensionada em unidades de container para escalar com a vitrine. DESIGN.md registra como componente isolado."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "font-size: 9px",
+        "createdAt": "2026-09-06T22:03:07.872Z",
+        "reason": "Claude: tipografia interna das miniaturas .mini (cqi) e o glifo desenhado do disco de erro. Nao sao texto lido desta pagina."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "font-size: clamp(4.5px, 2.05cqi, 9px)",
+        "createdAt": "2026-09-06T22:03:07.992Z",
+        "reason": "Claude: tipografia interna das miniaturas .mini (cqi) e o glifo desenhado do disco de erro. Nao sao texto lido desta pagina."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "font-size: .6rem",
+        "createdAt": "2026-09-06T22:03:08.117Z",
+        "reason": "Claude: tipografia interna das miniaturas .mini (cqi) e o glifo desenhado do disco de erro. Nao sao texto lido desta pagina."
+      }
+    ]
+  }
+}

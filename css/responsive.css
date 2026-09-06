@@ -1,0 +1,272 @@
+/* ==========================================================================
+   VICTOR GONÇALVES — Responsividade
+   --------------------------------------------------------------------------
+   Mobile-first. O arquivo base (style.css) já é a versão de celular completa;
+   aqui a fachada vai ganhando largura. Cada corte existe porque o conteúdo
+   pediu, não porque o aparelho tem um nome.
+
+   360px+  celular pequeno (base, sem media query)
+   480px+  celular grande
+   640px+  celular deitado / tablet pequeno
+   768px+  tablet
+   1024px+ notebook — a testeira abre e a fachada vira duas colunas
+   1280px+ desktop
+   1600px+ monitor ultrawide
+   ========================================================================== */
+
+/* ---------- Menu de navegação no celular ---------------------------------
+   Porta de enrolar: o painel desce da testeira, com as lâminas sugeridas por
+   um listrado horizontal muito sutil. Só existe abaixo de 1024px.          */
+@media (max-width: 1023.98px) {
+  .nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    display: block;
+    padding: 5.5rem var(--gutter) var(--s7);
+    background: rgb(8 22 40 / .97);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border-bottom: 1px solid rgb(78 112 153 / .32);
+    box-shadow: 0 24px 60px -20px rgb(2 6 14 / .95);
+    /* Lâminas da porta de enrolar */
+    background-image:
+      repeating-linear-gradient(180deg,
+        rgb(255 255 255 / .022) 0 1px,
+        transparent 1px 9px);
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition: transform .42s var(--ease), visibility .42s;
+    max-height: 100svh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .nav.is-open { transform: translateY(0); visibility: visible; }
+
+  .nav__list { flex-direction: column; align-items: stretch; gap: 0; }
+  .nav__list li + li { border-top: 1px solid rgb(78 112 153 / .18); }
+  .nav__link {
+    padding: 1.05rem 0;
+    font-size: var(--fs-lg);
+    font-weight: 600;
+  }
+  .nav__link::after { bottom: .55rem; }
+
+  .nav__cta { margin-top: var(--s6); width: 100%; padding-block: .95rem; min-height: 3rem; font-size: var(--fs-md); }
+
+  /* Trava a rolagem do fundo enquanto a porta está aberta */
+  body.is-locked { overflow: hidden; }
+}
+
+/* ---------- Herói no celular ---------------------------------------------
+   No celular o retrato inteiro empurrava o CTA para fora da primeira tela.
+   Aqui ele vira a placa de identificação do profissional: foto encaixada num
+   perfil de alumínio, com nome e função ao lado. O retrato de corpo inteiro
+   continua existindo, em tamanho real, logo abaixo em "Sobre".              */
+@media (max-width: 63.98em) {
+  .hero { padding-top: 5.5rem; padding-bottom: var(--s7); }
+  .hero__lede { margin-top: var(--s4); }
+  .hero__actions {
+    margin-top: var(--s6); gap: var(--s2);
+    flex-direction: column; align-items: stretch;
+  }
+  .hero__actions .btn { width: 100%; }
+  .strip { margin-top: var(--s6); padding-top: var(--s4); }
+  .hero__inner { gap: var(--s6); }
+
+  .portrait--hero {
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    border-radius: var(--r-lg);
+    border: 1px solid rgb(78 112 153 / .34);
+    background: linear-gradient(180deg, rgb(20 44 74 / .9), rgb(10 24 42 / .92));
+    box-shadow: var(--edge), var(--lift-2), var(--halo);
+  }
+  .portrait--hero .portrait__frame {
+    width: 7.25rem; flex: none;
+    border: 0; border-radius: 0; box-shadow: none;
+    border-right: 1px solid rgb(78 112 153 / .3);
+  }
+  /* Pinos preservados no celular, em escala menor: é a viewport primária
+     e o dispositivo assinatura não pode existir só no desktop. */
+  .portrait--hero .portrait__frame::before,
+  .portrait--hero .portrait__frame::after { width: 5px; height: 5px; top: 8px; }
+  .portrait--hero .portrait__frame::before { left: 8px; }
+  .portrait--hero .portrait__frame::after  { right: 8px; }
+  .portrait--hero .portrait__frame img {
+    height: 100%;
+    aspect-ratio: auto;
+    object-position: 50% 6%;
+  }
+  .portrait--hero .portrait__plate {
+    flex: 1;
+    min-height: 7rem;
+    width: auto; margin: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    gap: .15rem;
+    padding: var(--s4) var(--s5);
+    text-align: left;
+    border: 0; border-radius: 0; background: none; box-shadow: none;
+  }
+}
+
+/* ---------- 480px — celular grande --------------------------------------- */
+@media (min-width: 30em) {
+  .strip { gap: var(--s3) var(--s6); }
+  .foot__base { flex-wrap: nowrap; }
+}
+
+/* ---------- 640px — celular deitado / tablet pequeno --------------------- */
+@media (min-width: 40em) {
+  :root { --shell: 76rem; }
+
+  /* A partir daqui cabem lado a lado; abaixo disso ficam empilhados e da
+     mesma largura, sem coluna esquerda irregular. */
+  .hero__actions { flex-direction: row; }
+  .hero__actions .btn { width: auto; flex: 0 0 auto; }
+
+  .works { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .work--wide { grid-column: span 2; }
+  /* Nos projetos largos a vitrine fica lado a lado com o texto */
+  .work--wide { grid-template-columns: 1.15fr 1fr; align-items: stretch; }
+  .work--wide .work__window { border-bottom: 0; border-right: 1px solid rgb(78 112 153 / .24); aspect-ratio: auto; }
+  .work--wide .work__body { justify-content: center; padding: clamp(1.5rem, 4vw, 2.4rem); }
+
+  .perks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .quotes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stages { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .sobre__media { grid-template-columns: 1.6fr 1fr; }
+  .pilaster { display: block; }
+
+  .marks { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); }
+  .mark { padding-left: var(--s3); }
+
+  .form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .field--full, .form > .btn, .form__note { grid-column: 1 / -1; }
+}
+
+/* ---------- 768px — tablet ----------------------------------------------- */
+@media (min-width: 48em) {
+  .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* No tablet o Pro assume a largura inteira: é o letreiro aceso da fileira */
+  .plan--on { grid-column: 1 / -1; order: -1; }
+
+  .stages { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .stage:nth-child(4), .stage:nth-child(5) { grid-column: span 1; }
+
+  .foot__grid { grid-template-columns: 1.4fr 1fr 1fr; gap: var(--s6); }
+}
+
+/* ---------- 1024px — notebook: a fachada abre ---------------------------- */
+@media (min-width: 64em) {
+  html { scroll-padding-top: 6.5rem; }
+
+  /* Testeira completa */
+  .shutter-toggle { display: none; }
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.2rem, 2.6vw, 2.2rem);
+  }
+
+  /* Hero em duas colunas: texto à esquerda, painel do retrato à direita */
+  .hero { padding-top: 7.5rem; }
+  .hero__inner {
+    grid-template-columns: minmax(0, 1.32fr) minmax(16rem, .68fr);
+    gap: clamp(2.5rem, 5vw, 4rem);
+  }
+  .hero__copy { max-width: 40rem; }
+  .portrait--hero { justify-self: end; width: min(100%, 23rem); }
+  .portrait--hero .portrait__frame img { aspect-ratio: 1013 / 1300; }
+
+  /* Sem position:sticky nesta página: as seções de herói e contato precisam
+     de overflow recortado para os fundos, e overflow recortado anula sticky
+     nos descendentes. Melhor não ter do que ter quebrado. */
+  .sobre__grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; }
+
+  .works { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  /* Composição assimétrica: largo / estreito / estreito / largo */
+  .work--wide { grid-column: span 6; }
+  .works > .work:not(.work--wide) { grid-column: span 3; }
+  .work--wide { grid-template-columns: 1.25fr 1fr; }
+
+  .perks { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+  .stages { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .stage { padding: var(--s5) var(--s4); }
+
+  .quotes { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .quote blockquote p { font-size: var(--fs-md); }
+
+  .plans { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
+  .plan--on { grid-column: auto; order: 0; transform: translateY(-.9rem); }
+  .plan--on:hover { transform: translateY(-1.3rem); }
+
+  .contato__grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: start; }
+
+  /* Tooltip do WhatsApp só existe onde há cursor */
+  .wa__tip { display: block; }
+  .wa:hover .wa__tip, .wa:focus-visible .wa__tip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+/* ---------- 1280px — desktop --------------------------------------------- */
+@media (min-width: 80em) {
+  :root { --shell: 80rem; }
+
+  .hero__inner { grid-template-columns: minmax(0, 1.28fr) minmax(18rem, .72fr); }
+  .hero__copy { max-width: 44rem; }
+  .portrait--hero { width: min(100%, 25rem); }
+
+  .perk { padding: var(--s6); }
+  .plan { padding: var(--s6); }
+}
+
+/* ---------- 1600px — ultrawide -------------------------------------------
+   A largura de leitura não cresce junto com o monitor: o texto para de
+   crescer e a parede é que se estende.                                     */
+@media (min-width: 100em) {
+  :root {
+    --shell: 88rem;
+    --course-y: 10rem;
+  }
+  .hero__copy { max-width: 46rem; }
+  .hero__inner { gap: 6rem; }
+  .portrait--hero { width: min(100%, 30rem); }
+  .course__lede { max-width: 60ch; }
+}
+
+/* ---------- Telas muito baixas e deitadas --------------------------------
+   Celular na horizontal: 100svh vira uma faixa apertada, então o hero passa
+   a crescer com o conteúdo em vez de forçar a altura da tela.              */
+@media (max-height: 34em) and (orientation: landscape) {
+  .hero { min-height: auto; padding-top: 6rem; padding-bottom: var(--s7); }
+  .scroll-cue { display: none; }
+  .portrait--hero { display: none; }
+}
+
+/* ---------- Ponteiro grosso (toque) --------------------------------------
+   Sem hover confiável: os estados de foco/ativo assumem o trabalho e as
+   áreas de toque crescem.                                                  */
+@media (hover: none) {
+  .work:hover, .plan:hover, .btn--lit:hover, .btn--vinyl:hover,
+  .social a:hover, .wa:hover { transform: none; }
+
+  .nav__link::after { display: none; }
+  .qa__q { padding-block: 1.15rem; }
+  .work__link { padding-block: .5rem; }
+}
+
+/* ---------- Impressão ----------------------------------------------------- */
+@media print {
+  .fascia, .wa, .scroll-cue, .hero__bg, .contato__bg, .pilaster { display: none !important; }
+  body { background: #fff; color: #000; }
+  body::before, body::after { display: none; }
+  .hero { min-height: auto; padding-top: 0; }
+  .h2, h3, .hero__title { color: #000; }
+  .qa__a { display: block !important; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: .8em; }
+}
