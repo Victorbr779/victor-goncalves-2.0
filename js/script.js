@@ -12,8 +12,7 @@
    03. Acender ao rolar
    04. Vídeos sob demanda
    05. FAQ
-   06. Planos → formulário
-   07. Formulário → WhatsApp
+   06. Formulário → WhatsApp
    ========================================================================== */
 
 (function () {
@@ -123,7 +122,7 @@
     var groups = [
       ['.hero__title, .hero__lede, .hero__actions, .strip, .portrait--hero', 90],
       ['.course__head > *, .sobre__media, .sobre__copy > p, .marks, .chips', 70],
-      ['.work, .perk, .quote, .plan, .qa, .contato__copy > *, .form', 60]
+      ['.work, .perk, .quote, .qa, .contato__copy > *, .form', 60]
     ];
 
     /* Acende e, terminada a transição, devolve o elemento ao estado natural.
@@ -291,39 +290,7 @@
     });
   }());
 
-  /* ---------- 06. Planos → formulário --------------------------------------
-     Escolher um plano marca o campo correspondente lá embaixo: uma ação que
-     atravessa a página, para o visitante não digitar duas vezes.            */
-  (function plans() {
-    var select = $('#f-plano');
-    if (!select) return;
-
-    $$('[data-plan-cta]').forEach(function (cta) {
-      cta.addEventListener('click', function () {
-        var plano = cta.getAttribute('data-plan-cta');
-        var match = $$('option', select).some(function (o) {
-          if (o.value === plano || o.textContent.trim() === plano) {
-            select.value = o.value || o.textContent.trim();
-            return true;
-          }
-          return false;
-        });
-        if (match) {
-          select.classList.remove('is-bad');
-          /* Um pulso curto para o visitante ver o que mudou */
-          if (!reduceMotion) {
-            select.animate(
-              [{ boxShadow: '0 0 0 0 rgba(47,134,255,.55)' },
-               { boxShadow: '0 0 0 8px rgba(47,134,255,0)' }],
-              { duration: 700, easing: 'cubic-bezier(.16,.84,.34,1)' }
-            );
-          }
-        }
-      });
-    });
-  }());
-
-  /* ---------- 07. Formulário → WhatsApp ------------------------------------
+  /* ---------- 06. Formulário → WhatsApp ------------------------------------
      Sem back-end: os campos viram uma mensagem pronta e o WhatsApp abre.    */
   (function form() {
     var WHATSAPP = '5522992899127';
@@ -336,7 +303,6 @@
     var fone   = $('#f-fone');
     var email  = $('#f-email');
     var neg    = $('#f-neg');
-    var plano  = $('#f-plano');
     var msg    = $('#f-msg');
 
     /* Máscara de telefone: escreve como brasileiro escreve */
@@ -409,8 +375,7 @@
       var texto =
         'Olá, Victor! Meu nome é ' + nome.value.trim() + '. ' +
         'Tenho interesse em criar um site para meu negócio (' + neg.value + '). ' +
-        'Meu WhatsApp é ' + fone.value.trim() + ' e meu e-mail é ' + email.value.trim() + '. ' +
-        'Tenho interesse no plano ' + plano.value + '.' +
+        'Meu WhatsApp é ' + fone.value.trim() + ' e meu e-mail é ' + email.value.trim() + '.' +
         (msg.value.trim() ? ' Minha mensagem: ' + msg.value.trim() : '');
 
       status.textContent = 'Tudo certo — abrindo o WhatsApp com a sua mensagem pronta.';

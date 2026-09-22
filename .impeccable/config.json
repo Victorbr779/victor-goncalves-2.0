@@ -86,6 +86,15 @@
         "value": "font-size: .6rem",
         "createdAt": "2026-09-06T22:03:08.117Z",
         "reason": "Claude: tipografia interna das miniaturas .mini (cqi) e o glifo desenhado do disco de erro. Nao sao texto lido desta pagina."
+      },
+      {
+        "rule": "gpt-thin-border-wide-shadow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-22T00:37:18.767Z",
+        "reason": "pre-existing site-wide edge+lift design token (var(--edge), var(--lift-1)) used consistently across .work/.plan/buttons since before this session's changes; not introduced by the new project card"
       }
     ]
   }

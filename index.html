@@ -48,18 +48,6 @@
     "name": "Victor Gonçalves",
     "jobTitle": "Desenvolvedor Front-End",
     "image": "https://victorgoncalves.com.br/assets/images/perfil-2.png"
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Planos de criação de sites",
-    "itemListElement": [
-      { "@type": "Offer", "name": "Plano Essencial", "price": "397.00", "priceCurrency": "BRL",
-        "itemOffered": { "@type": "Service", "name": "Criação de site profissional — Essencial" } },
-      { "@type": "Offer", "name": "Plano Pro", "price": "597.00", "priceCurrency": "BRL",
-        "itemOffered": { "@type": "Service", "name": "Criação de site profissional — Pro" } },
-      { "@type": "Offer", "name": "Plano Premium", "price": "1497.00", "priceCurrency": "BRL",
-        "itemOffered": { "@type": "Service", "name": "Criação de site profissional — Premium" } }
-    ]
   }
 }
 </script>
@@ -136,7 +124,6 @@
         <li><a class="nav__link" href="#sobre">Sobre</a></li>
         <li><a class="nav__link" href="#projetos">Projetos</a></li>
         <li><a class="nav__link" href="#beneficios">Benefícios</a></li>
-        <li><a class="nav__link" href="#planos">Planos</a></li>
         <li><a class="nav__link" href="#contato">Contato</a></li>
       </ul>
       <a class="btn btn--lit btn--sm nav__cta" href="#contato">Solicitar orçamento</a>
@@ -298,17 +285,8 @@
       <article class="work work--wide">
         <div class="work__window" aria-hidden="true">
           <div class="chrome"><i></i><i></i><i></i><span class="chrome__url">tecceramica.com.br</span></div>
-          <div class="mini mini--tec">
-            <div class="mini__bar">
-              <span class="mini__brand">Teccerâmica</span>
-              <span class="mini__menu"><i>Início</i><i>Serviços</i><i>Contato</i></span>
-            </div>
-            <div class="mini__hero">
-              <span class="mini__title">Precisão que o paciente percebe</span>
-              <span class="mini__btn">Falar com o laboratório</span>
-            </div>
-            <div class="mini__row"><span>Coroas</span><span>Facetas</span><span>Implantes</span></div>
-          </div>
+          <img class="work__shot" src="assets/images/work-tecceramic.jpg"
+               alt="Captura de tela do site Teccerâmica" width="1600" height="803" loading="lazy" decoding="async">
         </div>
         <div class="work__body">
           <h3 class="work__name">Teccerâmica</h3>
@@ -318,40 +296,29 @@
             apresentar os serviços com clareza e gerar novos contatos de dentistas
             parceiros.
           </p>
-          <!-- SUBSTITUIR: trocar "#" pela URL real do projeto quando estiver no ar -->
-          <a class="work__link" href="#" aria-label="Ver o projeto Teccerâmica">
+          <a class="work__link" href="https://tecceramic.vercel.app/" target="_blank" rel="noopener" aria-label="Ver o projeto Teccerâmica">
             Ver projeto
             <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
           </a>
         </div>
       </article>
 
-      <!-- SUBSTITUIR: projeto de exemplo — trocar nome, descrição e URL por um caso real -->
+      <!-- PROJETO REAL -->
       <article class="work">
         <div class="work__window" aria-hidden="true">
-          <div class="chrome"><i></i><i></i><i></i><span class="chrome__url">studiomarina.com.br</span></div>
-          <div class="mini mini--arq">
-            <div class="mini__bar">
-              <span class="mini__brand">Marina Alves</span>
-              <span class="mini__menu"><i>Projetos</i><i>Estúdio</i></span>
-            </div>
-            <div class="mini__split">
-              <span class="mini__img"></span>
-              <span class="mini__txt">
-                <span class="mini__title">Espaços que respiram</span>
-                <span class="mini__btn">Ver projetos</span>
-              </span>
-            </div>
-          </div>
+          <div class="chrome"><i></i><i></i><i></i><span class="chrome__url">casamento-julia-pedro.vercel.app</span></div>
+          <img class="work__shot" src="assets/images/work-casamento-julia-pedro.jpg"
+               alt="Captura de tela do site de casamento de Julia e Pedro" width="1600" height="801" loading="lazy" decoding="async">
         </div>
         <div class="work__body">
-          <h3 class="work__name">Studio Marina Alves</h3>
-          <p class="work__cat">Portfólio profissional</p>
+          <h3 class="work__name">Casamento Julia &amp; Pedro</h3>
+          <p class="work__cat">Site de casamento</p>
           <p class="work__desc">
-            Portfólio de arquitetura e interiores construído para dar destaque
-            total às imagens dos projetos.
+            Site de convite para casamento com detalhes da cerimônia, confirmação
+            de presença, lista de presentes com Pix integrado e informações para
+            os convidados.
           </p>
-          <a class="work__link" href="#" aria-label="Ver o projeto Studio Marina Alves">
+          <a class="work__link" href="https://casamento-julia-pedro.vercel.app/" target="_blank" rel="noopener" aria-label="Ver o projeto Casamento Julia e Pedro">
             Ver projeto
             <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
           </a>
@@ -602,89 +569,6 @@
   </div>
 </section>
 
-<!-- ================= PLANOS ================= -->
-<!--
-  ÁREA DE EDIÇÃO COMERCIAL
-  Preços, nomes de planos, mensalidades e listas de benefícios estão todos aqui,
-  em HTML puro. Nada disso está no JavaScript — basta editar o texto abaixo.
--->
-<section class="course course--planos" id="planos">
-  <div class="shell">
-    <header class="course__head course__head--center">
-      <h2 class="h2">Escolha o plano ideal para o seu negócio.</h2>
-      <p class="course__lede">
-        Uma mensalidade opcional que cobre hospedagem, suporte e manutenção,
-        mais um valor único na criação. Sem letra miúda.
-      </p>
-    </header>
-
-    <div class="plans">
-
-      <!-- PLANO ESSENCIAL -->
-      <article class="plan" data-plan="Essencial">
-        <h3 class="plan__name">Essencial</h3>
-        <p class="plan__for">Para profissionais autônomos e pequenos negócios começando sua presença digital.</p>
-        <p class="plan__price"><span class="plan__cur">R$</span><span class="plan__val">69,90</span></p>
-        <p class="plan__note">por mês</p>
-        <p class="plan__rec">+ R$ 397,00 na criação do site</p>
-        <ul class="plan__list">
-          <li>Site profissional</li>
-          <li>Design responsivo</li>
-          <li>SEO básico</li>
-          <li>SSL</li>
-          <li>Formulário de contato</li>
-          <li>Integração com WhatsApp</li>
-          <li>Hospedagem e manutenção conforme condições do serviço</li>
-        </ul>
-        <a class="btn btn--vinyl btn--block plan__cta" href="#contato" data-plan-cta="Essencial">Quero o Essencial</a>
-      </article>
-
-      <!-- PLANO PRO — o letreiro aceso da fileira -->
-      <article class="plan plan--on" data-plan="Pro">
-        <span class="violator" aria-hidden="true">Mais escolhido</span>
-        <h3 class="plan__name">Pro</h3>
-        <p class="plan__for">Para empresas que já vendem e precisam de um site que acompanhe o ritmo.</p>
-        <p class="plan__price"><span class="plan__cur">R$</span><span class="plan__val">159,90</span></p>
-        <p class="plan__note">por mês</p>
-        <p class="plan__rec">+ R$ 597,00 na criação do site</p>
-        <ul class="plan__list">
-          <li>Tudo do Essencial</li>
-          <li>Design mais personalizado</li>
-          <li>SEO aprimorado</li>
-          <li>Mais seções e páginas</li>
-          <li>Otimização de performance</li>
-          <li>Integrações adicionais</li>
-          <li>Suporte e manutenção</li>
-        </ul>
-        <a class="btn btn--lit btn--block plan__cta" href="#contato" data-plan-cta="Pro">Quero o Pro</a>
-        <span class="sr-only">Plano mais escolhido</span>
-      </article>
-
-      <!-- PLANO PREMIUM -->
-      <article class="plan" data-plan="Premium">
-        <h3 class="plan__name">Premium</h3>
-        <p class="plan__for">Para empresas que querem uma presença digital mais completa e um projeto visual próprio.</p>
-        <p class="plan__price"><span class="plan__cur">R$</span><span class="plan__val">239,90</span></p>
-        <p class="plan__note">por mês</p>
-        <p class="plan__rec">+ R$ 1.497,00 na criação do site</p>
-        <ul class="plan__list">
-          <li>Tudo do Pro</li>
-          <li>Projeto visual premium</li>
-          <li>Estrutura personalizada</li>
-          <li>SEO avançado</li>
-          <li>Recursos personalizados</li>
-          <li>Integrações</li>
-          <li>Otimização avançada</li>
-          <li>Suporte prioritário</li>
-        </ul>
-        <a class="btn btn--vinyl btn--block plan__cta" href="#contato" data-plan-cta="Premium">Quero o Premium</a>
-      </article>
-
-    </div>
-    <p class="plans__foot">Ainda em dúvida? Me chame no WhatsApp e a gente descobre junto qual faz sentido.</p>
-  </div>
-</section>
-
 <!-- ================= FAQ ================= -->
 <section class="course course--faq">
   <div class="shell shell--narrow">
@@ -833,7 +717,7 @@
         <p class="err" id="e-email" role="alert" hidden></p>
       </div>
 
-      <div class="field">
+      <div class="field field--full">
         <label for="f-neg">Tipo de negócio<span aria-hidden="true"> *</span></label>
         <div class="select">
           <select id="f-neg" name="negocio" required aria-describedby="e-neg">
@@ -850,19 +734,6 @@
           <svg class="i select__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </div>
         <p class="err" id="e-neg" role="alert" hidden></p>
-      </div>
-
-      <div class="field">
-        <label for="f-plano">Plano de interesse</label>
-        <div class="select">
-          <select id="f-plano" name="plano">
-            <option value="Ainda não sei" selected>Ainda não sei</option>
-            <option>Essencial</option>
-            <option>Pro</option>
-            <option>Premium</option>
-          </select>
-          <svg class="i select__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
-        </div>
       </div>
 
       <div class="field field--full">
@@ -903,7 +774,6 @@
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#beneficios">Benefícios</a></li>
-        <li><a href="#planos">Planos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>

@@ -859,6 +859,17 @@ p { text-wrap: pretty; }
 .mini--arq { --acc: #A9763F; --pap: #F8F5F0; --gry: #E6DED2; --tx: #3B3229; --tx2: #6E6459; }
 .mini--auto{ --acc: #E5872A; --pap: #17191E; --gry: #2A2E36; --tx: #E8EAEE; --tx2: #A3ACBA; }
 .mini--odo { --acc: #3D7FE8; --pap: #F4F9FF; --gry: #DCE7F5; --tx: #24344A; --tx2: #566A82; }
+.mini--wed { --acc: #B0784F; --pap: #FBF6F0; --gry: #EFE2D3; --tx: #3E332A; --tx2: #7A6A5A; }
+
+/* Captura de tela real do projeto, no lugar da miniatura desenhada em CSS */
+.work__shot {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
 
 .mini__bar {
   display: flex; align-items: center; justify-content: space-between; gap: 3cqi;
@@ -1039,121 +1050,7 @@ p { text-wrap: pretty; }
 .who__id strong { font-size: var(--fs-md); color: var(--vinyl); }
 .who__id span { font-size: var(--fs-xs); color: var(--ink-dim); }
 
-/* ---------- 14. Planos --------------------------------------------------- */
-.plans { display: grid; gap: var(--s5); align-items: start; }
-
-/* Face apagada: mais escura que a parede, texto recuado, sem halo.
-   É a ausência de luz nestas duas que faz o Pro parecer aceso. */
-.plan {
-  position: relative;
-  display: flex; flex-direction: column;
-  padding: clamp(1.6rem, 4vw, 2.1rem);
-  border-radius: var(--r-lg);
-  border: 1px solid var(--edge-off);
-  background: linear-gradient(180deg, var(--face-off-1), var(--face-off-2));
-  box-shadow: var(--edge), var(--lift-1);
-  transition: transform .34s var(--ease), box-shadow .34s var(--ease),
-              border-color .34s var(--ease);
-}
-.plan:hover { transform: translateY(-4px); border-color: rgb(120 176 235 / .45); box-shadow: var(--edge), var(--lift-2); }
-.plan:not(.plan--on) .plan__name { color: var(--ink); }
-.plan:not(.plan--on) .plan__val  { color: var(--ink); }
-.plan:not(.plan--on) .plan__rec  { color: var(--ink-on-face); }
-.plan:not(.plan--on) .plan__list li { color: var(--ink-dim); }
-.plan:not(.plan--on) .plan__list li::before { background: #4E7CB0; box-shadow: none; }
-/* A chapa fica apagada; o botão, não. Um letreiro desligado ainda tem um
-   botão de verdade — deixar dois dos três caminhos de compra parecendo
-   controles inativos seria um problema de conversão, não de estética. */
-.plan:not(.plan--on) .plan__cta {
-  color: var(--vinyl);
-  border-color: rgb(126 180 240 / .62);
-  background: rgb(23 56 96 / .85);
-}
-.plan:not(.plan--on) .plan__cta:hover {
-  border-color: var(--led-hot);
-  background: rgb(30 79 140 / .95);
-  color: #FFFFFF;
-}
-
-/* Pinos de fixação: a fileira fica montada na parede */
-.plan::before {
-  content: '';
-  position: absolute;
-  top: 11px; left: 11px;
-  width: 6px; height: 6px;
-  border-radius: 50%;
-  background: linear-gradient(180deg, var(--pin), #2A4363);
-  box-shadow: 0 1px 2px rgb(0 0 0 / .6);
-}
-
-/* Numa fileira de três letreiros, um está aceso. É assim que "mais escolhido" se diz. */
-.plan--on {
-  border-color: var(--edge-lit);
-  background: linear-gradient(180deg, var(--face-on-1), var(--face-on-2));
-  box-shadow: var(--edge), var(--lift-2), var(--halo-hot);
-}
-.plan--on:hover { box-shadow: var(--edge), var(--lift-2), 0 22px 66px -14px rgb(47 134 255 / .75); }
-.plan--on .plan__for { color: #C3DCF8; }
-/* Sem este override o rótulo herdava --ink-dim e caía para ~3,4:1 sobre a
-   face acesa do Pro — a única face clara da página. */
-.plan--on .plan__note { color: #BCD6F4; }
-.plan--on .plan__list li { color: #EAF3FF; }
-
-/* Selo carimbado que rompe a borda da chapa */
-.violator {
-  position: absolute;
-  top: -.85rem; right: 1.4rem;
-  padding: .35rem .8rem;
-  font-size: var(--fs-label); font-weight: 800; font-stretch: 88%;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--ink-on-lit);
-  background: linear-gradient(180deg, #FFFFFF, var(--acryl-on) 60%, #C9DEF7);
-  border-radius: var(--r-sm);
-  box-shadow: var(--edge), var(--lift-1), var(--halo);
-  transform: rotate(-1.4deg);
-  white-space: nowrap;
-}
-
-.plan__name {
-  font-size: var(--fs-stat); font-weight: 800; font-stretch: 104%;
-  letter-spacing: -.025em;
-}
-.plan--on .plan__name { color: #FFFFFF; }
-.plan__for { margin-top: var(--s2); font-size: var(--fs-sm); color: var(--ink-dim); min-height: 3.4rem; }
-
-.plan__price {
-  display: flex; align-items: baseline; gap: .22rem;
-  margin-top: var(--s5);
-  color: var(--vinyl);
-  font-variant-numeric: tabular-nums;
-}
-.plan__cur { font-size: var(--fs-lg); font-weight: 600; color: var(--ink-dim); }
-.plan__val { font-size: var(--fs-price); font-weight: 800; font-stretch: 96%; letter-spacing: -.04em; line-height: 1; }
-.plan__note { font-size: var(--fs-label); font-weight: 700; font-stretch: 86%; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-dim); margin-top: var(--s2); }
-.plan__rec {
-  margin-top: var(--s3);
-  padding-top: var(--s3);
-  border-top: 1px solid rgb(78 112 153 / .22);
-  font-size: var(--fs-md); font-weight: 700; color: var(--led-hot);
-  font-variant-numeric: tabular-nums;
-}
-
-.plan__list { display: grid; gap: .65rem; margin: var(--s5) 0; font-size: var(--fs-sm); }
-.plan__list li { display: flex; gap: .6rem; align-items: flex-start; color: var(--ink); }
-.plan__list li::before {
-  content: '';
-  margin-top: .5rem;
-  width: 6px; height: 6px; flex: none;
-  border-radius: 50%;
-  background: var(--led);
-  box-shadow: 0 0 7px rgb(47 134 255 / .75);
-}
-.plan--on .plan__list li::before { background: var(--led-hot); }
-
-.plan__cta { margin-top: auto; }
-.plans__foot { margin-top: var(--s6); text-align: center; font-size: var(--fs-sm); color: var(--ink-dim); }
-
-/* ---------- 15. FAQ ------------------------------------------------------ */
+/* ---------- 14. FAQ ------------------------------------------------------ */
 /* Uma chapa afastada da parede, dividida por filetes — e não uma lista
    de hairlines flutuando no campo. */
 .faq {
@@ -1182,7 +1079,7 @@ p { text-wrap: pretty; }
 .qa__a { overflow: hidden; }
 .qa__a p { padding-bottom: var(--s5); color: var(--ink-dim); max-width: 66ch; }
 
-/* ---------- 16. Contato / formulário ------------------------------------- */
+/* ---------- 15. Contato / formulário ------------------------------------- */
 .course--contato { position: relative; overflow: hidden; isolation: isolate; }
 .contato__bg { position: absolute; inset: 0; z-index: -1; background: var(--night); }
 
@@ -1284,7 +1181,7 @@ p { text-wrap: pretty; }
 .form__note.is-ok { color: var(--led-hot); }
 .form__note.is-bad { color: var(--alert-ink); }
 
-/* ---------- 17. Rodapé --------------------------------------------------- */
+/* ---------- 16. Rodapé --------------------------------------------------- */
 .foot {
   position: relative;
   padding-top: var(--s9);
@@ -1333,7 +1230,7 @@ p { text-wrap: pretty; }
 .foot__base a { display: inline-block; padding-block: .5rem; }
 .foot__base a:hover { color: var(--led-hot); text-decoration: underline; }
 
-/* ---------- 18. CTA flutuante -------------------------------------------- */
+/* ---------- 17. CTA flutuante -------------------------------------------- */
 .wa {
   position: fixed;
   right: clamp(.9rem, 3vw, 1.6rem);
@@ -1389,7 +1286,7 @@ p { text-wrap: pretty; }
   display: none;
 }
 
-/* ---------- 19. Movimento ------------------------------------------------ */
+/* ---------- 18. Movimento ------------------------------------------------ */
 /* Um único gesto autoral, reaproveitado: as coisas acendem.
    Estado padrão é visível; o JS só adiciona o ponto de partida quando pode animar. */
 [data-lit] {

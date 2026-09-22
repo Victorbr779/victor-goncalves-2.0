@@ -148,10 +148,6 @@
 
 /* ---------- 768px — tablet ----------------------------------------------- */
 @media (min-width: 48em) {
-  .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  /* No tablet o Pro assume a largura inteira: é o letreiro aceso da fileira */
-  .plan--on { grid-column: 1 / -1; order: -1; }
-
   .stages { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .stage:nth-child(4), .stage:nth-child(5) { grid-column: span 1; }
 
@@ -199,10 +195,6 @@
   .quotes { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .quote blockquote p { font-size: var(--fs-md); }
 
-  .plans { grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; }
-  .plan--on { grid-column: auto; order: 0; transform: translateY(-.9rem); }
-  .plan--on:hover { transform: translateY(-1.3rem); }
-
   .contato__grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: start; }
 
   /* Tooltip do WhatsApp só existe onde há cursor */
@@ -222,7 +214,6 @@
   .portrait--hero { width: min(100%, 25rem); }
 
   .perk { padding: var(--s6); }
-  .plan { padding: var(--s6); }
 }
 
 /* ---------- 1600px — ultrawide -------------------------------------------
@@ -252,7 +243,7 @@
    Sem hover confiável: os estados de foco/ativo assumem o trabalho e as
    áreas de toque crescem.                                                  */
 @media (hover: none) {
-  .work:hover, .plan:hover, .btn--lit:hover, .btn--vinyl:hover,
+  .work:hover, .btn--lit:hover, .btn--vinyl:hover,
   .social a:hover, .wa:hover { transform: none; }
 
   .nav__link::after { display: none; }
