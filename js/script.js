@@ -119,8 +119,11 @@
   (function reveal() {
     if (reduceMotion || !('IntersectionObserver' in window)) return;
 
+    /* O herói fica fora desta lista de propósito: é a primeira coisa que o
+       visitante vê, e nada ali pode depender de um IntersectionObserver
+       disparar para aparecer. O gesto de "acender ao entrar em cena" é para
+       o que entra em cena rolando — o herói já começa em cena. */
     var groups = [
-      ['.hero__title, .hero__lede, .hero__actions, .strip, .portrait--hero', 90],
       ['.course__head > *, .sobre__media, .sobre__copy > p, .marks, .chips', 70],
       ['.work, .perk, .quote, .qa, .contato__copy > *, .form', 60]
     ];

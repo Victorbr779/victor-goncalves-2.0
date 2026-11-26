@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#0D2038">
+<meta name="theme-color" content="#05060f">
 
 <title>Victor Gonçalves | Criação de Sites Profissionais para Empresas</title>
 <meta name="description" content="Criação de sites profissionais, rápidos e preparados para o Google. Design responsivo, SSL e integração com WhatsApp. Seu site no ar em 7 a 15 dias.">
@@ -26,8 +26,9 @@
 <meta name="twitter:description" content="Sites profissionais, rápidos e preparados para o Google. Seu site no ar em 7 a 15 dias.">
 <meta name="twitter:image" content="https://victorgoncalves.com.br/assets/images/perfil-2.png">
 
-<!-- Fonte variável self-hospedada: um único arquivo cobre pesos 400-900 e larguras 75-125 -->
-<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<!-- Fontes variáveis self-hospedadas: Manrope nos títulos, Inter no corpo -->
+<link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
 
@@ -78,36 +79,6 @@
 </head>
 
 <body>
-<!--
-  THESIS: A fachada comercial iluminada à noite. Um site é o letreiro do negócio na rua
-  digital, e esta página é esse letreiro aceso. Recusa o arranjo padrão da categoria:
-  o herói SaaS escuro com orbes de gradiente flutuando e cartões de vidro empilhados.
-
-  OWN-WORLD: Parede noturna azul-petróleo ocupando a maior parte da tela; luz sempre
-  contida por uma borda fabricada — face de acrílico leitoso acesa, perfil de alumínio
-  com fio de luz na aresta superior, halo curto só na parede atrás. Nada acende por
-  dentro solto no espaço. Painéis afastados da parede com sombra de espaçador. Letra
-  Archivo variável, pesada e expandida na fachada, recortada como vinil nos rótulos.
-
-  STORY: O visitante entende em segundos que está diante de alguém que constrói
-  presença digital com acabamento, acredita nisso porque a própria página se comporta
-  assim, e age chamando no WhatsApp com nome, contato e plano já preenchidos.
-
-  FIRST VIEWPORT: Vídeo de riscos de luz azul em tela cheia, escurecido, lido como
-  brilho ambiente da rua. Navbar é a testeira de alumínio da fachada. À esquerda,
-  H1 em letra-caixa com uma única palavra acesa cujo halo mora numa placa de parede
-  atrás dela; abaixo, subtítulo, CTA em chapa de acrílico acesa e CTA secundário
-  vazado em vinil; ao pé, quatro selos técnicos numa régua iluminada. À direita,
-  retrato de Victor dentro de painel retangular de acrílico com perfil de alumínio
-  e pinos de espaçador aparentes.
-
-  FORM: Letreiro Luminoso — escolhido pelo usuário sobre a direção sorteada
-  (A Placa Gravada). Seed key: 0ca5e0f6.
-
-  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish
-  review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
--->
-
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
 <!-- ================= TESTEIRA / NAVBAR ================= -->
@@ -184,8 +155,8 @@
     <!-- Retrato dentro de um painel retangular de acrílico, como um painel impresso de vitrine -->
     <figure class="portrait portrait--hero">
       <div class="portrait__frame">
-        <img src="assets/images/perfil-2.png" alt="Victor Gonçalves, desenvolvedor de sites, em terno preto"
-             width="1013" height="1520" decoding="async" fetchpriority="low">
+        <img src="assets/images/banner-principal.png" alt="Projetos de Victor Gonçalves em destaque: sites para Dente Novo, Tecceramic, Wanessa Marins Lima e Pedro &amp; Julia, em laptop e celular"
+             width="1536" height="1024" decoding="async" fetchpriority="low">
         <span class="portrait__glass" aria-hidden="true"></span>
       </div>
       <figcaption class="portrait__plate">
@@ -207,7 +178,7 @@
     <div class="sobre__media">
       <figure class="portrait">
         <div class="portrait__frame">
-          <img src="assets/images/perfil-3.png" alt="Victor Gonçalves de braços cruzados, em camisa preta"
+          <img src="assets/images/perfil-2.png" alt="Victor Gonçalves de braços cruzados, em camisa preta"
                width="1013" height="1520" loading="lazy" decoding="async">
           <span class="portrait__glass" aria-hidden="true"></span>
         </div>
@@ -282,7 +253,7 @@
     <div class="works">
 
       <!-- PROJETO REAL -->
-      <article class="work work--wide">
+      <article class="work">
         <div class="work__window" aria-hidden="true">
           <div class="chrome"><i></i><i></i><i></i><span class="chrome__url">tecceramica.com.br</span></div>
           <img class="work__shot" src="assets/images/work-tecceramic.jpg"
@@ -325,63 +296,42 @@
         </div>
       </article>
 
-      <!-- SUBSTITUIR: projeto de exemplo -->
+      <!-- PROJETO REAL -->
       <article class="work">
         <div class="work__window" aria-hidden="true">
-          <div class="chrome"><i></i><i></i><i></i><span class="chrome__url">oficinaduarte.com.br</span></div>
-          <div class="mini mini--auto">
-            <div class="mini__bar">
-              <span class="mini__brand">Oficina Duarte</span>
-              <span class="mini__menu"><i>Serviços</i><i>Orçamento</i></span>
-            </div>
-            <div class="mini__hero">
-              <span class="mini__title">Seu carro pronto no prazo</span>
-              <span class="mini__btn">Orçamento no WhatsApp</span>
-            </div>
-            <div class="mini__tiles"><span>Revisão</span><span>Freios</span><span>Suspensão</span><span>Elétrica</span></div>
-          </div>
+          <div class="chrome"><i></i><i></i><i></i><span class="chrome__url">dente-pronto.vercel.app</span></div>
+          <img class="work__shot" src="assets/images/work-dente-pronto.png"
+               alt="Captura de tela do site Dente Novo" width="1905" height="955" loading="lazy" decoding="async">
         </div>
         <div class="work__body">
-          <h3 class="work__name">Oficina Duarte</h3>
-          <p class="work__cat">Site de serviços</p>
+          <h3 class="work__name">Dente Novo</h3>
+          <p class="work__cat">Site para consultório</p>
           <p class="work__desc">
-            Página de serviços automotivos com orçamento direto pelo WhatsApp a
-            partir de qualquer seção.
+            Site para clínica odontológica com visual moderno e humanizado,
+            apresentação dos tratamentos e agendamento de avaliação sempre à vista.
           </p>
-          <a class="work__link" href="#" aria-label="Ver o projeto Oficina Duarte">
+          <a class="work__link" href="https://dente-pronto.vercel.app/" target="_blank" rel="noopener" aria-label="Ver o projeto Dente Novo">
             Ver projeto
             <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
           </a>
         </div>
       </article>
 
-      <!-- SUBSTITUIR: projeto de exemplo -->
-      <article class="work work--wide">
+      <!-- PROJETO REAL -->
+      <article class="work">
         <div class="work__window" aria-hidden="true">
-          <div class="chrome"><i></i><i></i><i></i><span class="chrome__url">helenaprado.odo.br</span></div>
-          <div class="mini mini--odo">
-            <div class="mini__bar">
-              <span class="mini__brand">Dra. Helena Prado</span>
-              <span class="mini__menu"><i>Tratamentos</i><i>Consultório</i><i>Contato</i></span>
-            </div>
-            <div class="mini__split mini__split--rev">
-              <span class="mini__txt">
-                <span class="mini__title">Cuidar do sorriso sem medo</span>
-                <span class="mini__btn">Agendar avaliação</span>
-              </span>
-              <span class="mini__img"></span>
-            </div>
-            <div class="mini__row"><span>Clareamento</span><span>Ortodontia</span><span>Implantes</span></div>
-          </div>
+          <div class="chrome"><i></i><i></i><i></i><span class="chrome__url">wanessa-tattoo.vercel.app</span></div>
+          <img class="work__shot" src="assets/images/work-wanessa-tattoo.png"
+               alt="Captura de tela do site de Wanessa Marins Lima" width="1915" height="955" loading="lazy" decoding="async">
         </div>
         <div class="work__body">
-          <h3 class="work__name">Dra. Helena Prado</h3>
-          <p class="work__cat">Site para consultório</p>
+          <h3 class="work__name">Wanessa Marins Lima</h3>
+          <p class="work__cat">Portfólio profissional</p>
           <p class="work__desc">
-            Site de consultório odontológico com apresentação dos tratamentos e
-            agendamento em um toque.
+            Portfólio para tatuadora com apresentação de estilos, processo de
+            trabalho e agendamento direto pelo site.
           </p>
-          <a class="work__link" href="#" aria-label="Ver o projeto Dra. Helena Prado">
+          <a class="work__link" href="https://wanessa-tattoo.vercel.app/" target="_blank" rel="noopener" aria-label="Ver o projeto Wanessa Marins Lima">
             Ver projeto
             <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
           </a>
@@ -404,42 +354,42 @@
 
     <ul class="perks">
       <li class="perk">
-        <svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4z"/><path d="M8 20h8M12 16v4"/><path d="M7 9h5M7 12h3"/></svg>
+        <span class="perk__mech"><svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4z"/><path d="M8 20h8M12 16v4"/><path d="M7 9h5M7 12h3"/></svg></span>
         <h3 class="perk__title">Design sob medida</h3>
         <p>Seu site é desenhado a partir da identidade e dos objetivos do seu negócio — não de um modelo pronto.</p>
       </li>
       <li class="perk">
-        <svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="13" height="10" rx="1"/><rect x="15" y="9" width="6" height="11" rx="1"/><path d="M8 18h4"/></svg>
+        <span class="perk__mech"><svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="13" height="10" rx="1"/><rect x="15" y="9" width="6" height="11" rx="1"/><path d="M8 18h4"/></svg></span>
         <h3 class="perk__title">Funciona no celular</h3>
         <p>A experiência é pensada primeiro para a tela pequena, que é onde a maioria dos seus clientes vai acessar.</p>
       </li>
       <li class="perk">
-        <svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5 21 21"/><path d="M9 11h4"/></svg>
+        <span class="perk__mech"><svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M15.5 15.5 21 21"/><path d="M9 11h4"/></svg></span>
         <h3 class="perk__title">Encontrado no Google</h3>
         <p>Estrutura preparada para mecanismos de busca, com títulos, descrições e endereços organizados.</p>
       </li>
       <li class="perk">
-        <svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v2"/></svg>
+        <span class="perk__mech"><svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v2"/></svg></span>
         <h3 class="perk__title">Conexão segura</h3>
         <p>Certificado SSL incluso: seu endereço abre com o cadeado de segurança que passa confiança ao visitante.</p>
       </li>
       <li class="perk">
-        <svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+        <span class="perk__mech"><svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
         <h3 class="perk__title">Abre na hora</h3>
         <p>Código otimizado para carregar rápido mesmo em conexão móvel — visitante que espera, desiste.</p>
       </li>
       <li class="perk">
-        <svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2z"/></svg>
+        <span class="perk__mech"><svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2-2z"/></svg></span>
         <h3 class="perk__title">Suporte contínuo</h3>
         <p>Manutenção e ajustes depois da publicação, para o site acompanhar o seu negócio.</p>
       </li>
       <li class="perk">
-        <svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 18 0"/><circle cx="12" cy="12" r="2.5"/><path d="M12 14.5V21M8 21h8"/></svg>
+        <span class="perk__mech"><svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 0 1 18 0"/><circle cx="12" cy="12" r="2.5"/><path d="M12 14.5V21M8 21h8"/></svg></span>
         <h3 class="perk__title">Caminho até a venda</h3>
         <p>A navegação é planejada para levar o visitante até o contato, não para fazer ele se perder.</p>
       </li>
       <li class="perk">
-        <svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg>
+        <span class="perk__mech"><svg class="i i--lg" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></span>
         <h3 class="perk__title">Código limpo</h3>
         <p>Feito sem excesso de ferramentas desnecessárias, o que deixa o site leve e fácil de manter no futuro.</p>
       </li>
@@ -494,6 +444,7 @@
   <div class="shell">
     <header class="course__head">
       <h2 class="h2">Quem já confiou, recomenda.</h2>
+      <p class="course__lede course__lede--note">Depoimentos ilustrativos, para mostrar o formato — em breve, histórias reais de quem já é cliente.</p>
     </header>
 
     <!--
@@ -503,7 +454,8 @@
       atribuído a um cliente real, de propósito — pendurar uma citação
       fabricada num negócio que existe seria uma afirmação falsa sobre ele.
       Troque por depoimentos reais, com autorização de quem os deu, ou
-      remova a seção inteira até ter os primeiros.
+      remova a seção inteira até ter os primeiros. A nota visível na
+      interface (course__lede--note) também deve sair quando isso acontecer.
     -->
     <ul class="quotes">
       <li class="quote">

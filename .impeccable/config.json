@@ -95,6 +95,150 @@
         ],
         "createdAt": "2026-09-22T00:37:18.767Z",
         "reason": "pre-existing site-wide edge+lift design token (var(--edge), var(--lift-1)) used consistently across .work/.plan/buttons since before this session's changes; not introduced by the new project card"
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-26T02:34:36.938Z",
+        "reason": "Claude: pinned design-system-victor-goncalves.md (AuthKit luminous-circuit-theater world) explicitly specifies vertical text-clipped gradient on headings/emphasis words with a soft glow text-shadow as the signature 'illuminated heading' treatment. This overrides the generic refuse-by-default (craft-floor marks gradient text as a default, not an absolute ban, and says a pinned world's own words earn it back)."
+      },
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-11-26T02:34:37.030Z",
+        "reason": "Claude: same pinned-world justification as index.html — gradient-filled headings/emphasis are the documented signature of the AuthKit luminous-circuit-theater system the user pinned."
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-26T02:34:37.120Z",
+        "reason": "Claude: detector cannot resolve the page's alpha-composited dark surfaces (backdrop-filter glass over #05060f canvas) and falls back to an assumed white/gray background, producing false low-contrast readings. Verified in a real Chrome render at desktop and mobile widths: body text computes ~8.4:1 and muted text ~5.76:1 against the true #05060f canvas (hand-computed WCAG relative luminance). This project's own config.json already documents this detector limitation for other rules (clamp()-related false positives) from a prior session."
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-26T02:34:37.198Z",
+        "reason": "Claude: design-system-victor-goncalves.md names Inter explicitly as the sanctioned fallback for 'Untitled Sans' (a commercial font) — 'If unavailable, use Inter.' Self-hosted per project convention (no third-party font requests)."
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-11-26T02:34:37.289Z",
+        "reason": "Claude: same sanctioned-fallback justification as index.html — Inter is the pinned design system's documented substitute for Untitled Sans."
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-26T02:34:37.363Z",
+        "reason": "Claude: finding's own numbers (h2 13.6px, h3 16.8px, body 14px) don't correspond to any computed size in the stylesheet (h2 clamp floor is 28.8px) — the detector does not resolve clamp() font-size expressions, a limitation this project's config.json already documents from a prior session for a different rule."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "font-size: 9px",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-11-26T02:44:30.065Z",
+        "reason": "Claude: .chrome__url — a picture of a browser URL bar inside the project-window device, not text this page's visitor reads as content (same exception the prior session's DESIGN.md already named)."
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "font-size: .6rem",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-11-26T02:44:30.221Z",
+        "reason": "Claude: the drawn glyph inside the form error disc (.err::before), an icon-sized mark, not body text on the type ramp."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(0 0 0 / .35)",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-11-26T02:44:30.450Z",
+        "reason": "Claude: standard recessed-input inset shadow (form fields). Raw black at low alpha for a depth/inset effect is conventional CSS practice, not a palette color — same class as the project's existing lift/rim shadow tokens which also compose from raw rgb(2 4 12/*) blacks."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(255 255 255 / .18)",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-11-26T02:44:30.528Z",
+        "reason": "Claude: .wa:hover inset highlight on the WhatsApp button — third-party brand housing, already a quarantined color family in this system (--wa-*)."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(120 170 255 / .1)",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-11-26T02:44:30.604Z",
+        "reason": "Claude: one-off atmospheric radial-gradient value inside .hero__fallback's authored spotlight illustration, not a reusable UI token — same category as the hero scene's other bespoke gradient stops."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(120 170 255 / .12)",
+        "files": [
+          "css/style.css"
+        ],
+        "createdAt": "2026-11-26T02:44:30.682Z",
+        "reason": "Claude: same hero__fallback atmospheric-illustration reasoning as the .1-alpha entry above."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#fff",
+        "files": [
+          "css/responsive.css"
+        ],
+        "createdAt": "2026-11-26T02:44:30.761Z",
+        "reason": "Claude: inside @media print only (body{background:#fff;color:#000}) — a print stylesheet, not the on-screen design system."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#000",
+        "files": [
+          "css/responsive.css"
+        ],
+        "createdAt": "2026-11-26T02:44:30.864Z",
+        "reason": "Claude: same @media print reasoning as #fff — print-only override, not on-screen UI."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(255, 255, 255)",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-26T02:44:41.285Z",
+        "reason": "Claude: same gradient-clip-text resolution limitation already documented for the gradient-text/low-contrast ignores — the detector falls back to a white/black default when it cannot resolve background-clip:text + transparent color on skip-link/hero elements. No literal white background exists on this element in the stylesheet."
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(0, 0, 0)",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-26T02:44:41.366Z",
+        "reason": "Claude: the 'Seu negócio' hero heading has no black text color in the stylesheet — this is the same gradient-clip-text (background-clip:text, color:transparent) detector resolution limitation already documented for the gradient-text and low-contrast ignores on this file."
       }
     ]
   }

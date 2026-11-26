@@ -31,7 +31,7 @@ Depois acesse `http://localhost:4173`.
 ├── js/
 │   └── script.js       navegação, FAQ, vídeo e formulário
 ├── assets/
-│   ├── fonts/          Archivo variável (self-hospedada)
+│   ├── fonts/          Manrope e Inter variáveis (self-hospedadas)
 │   ├── images/         as três fotos
 │   └── videos/
 ├── docs/               os arquivos originais, como você entregou
@@ -203,18 +203,25 @@ reais, é só trocar o `<div class="mini ...">` por uma `<img>` dentro do
 
 ## Detalhes que valem saber
 
-**A identidade é "letreiro luminoso"** — uma fachada comercial à noite. A regra
-que segura o visual: *a luz é sempre contida por uma borda fabricada*. Face de
-acrílico acesa, perfil de alumínio com fio de luz na aresta de cima, halo curto
-só na parede atrás. Nada acende solto no espaço. É isso que separa o site de uma
-estética "gamer" — se um dia você adicionar um elemento novo, siga essa regra.
+**A identidade é um "teatro de circuito luminoso"** — um instrumento técnico
+aceso sobre um fundo quase preto contínuo (`--canvas: #05060f`). Luz vira
+gradiente nos títulos (preenchimento de texto, não contorno) e traço fino de
+circuito nas superfícies — nunca uma bolha de gradiente solta atrás de um
+cartão. Vidro (`.form`, `.faq`, `.quotes`, os painéis de retrato) é sempre uma
+camada quase transparente com aresta fria por dentro (`--rim`), não um efeito
+decorativo aplicado por cima. Se um dia você adicionar um elemento novo, siga
+essa lógica: fundo escuro contínuo, vidro com aresta, emissores de ponto
+(`--emitter`) só em elementos pequenos (≤9px), gradiente reservado a títulos e
+ênfases — nunca cor nova fora dessa paleta azul-gelo.
 
 **Um único gesto de movimento**: as coisas acendem quando entram na tela. Não
 há efeito espalhado por toda parte; é o mesmo gesto repetido.
 
-**O plano em destaque é o letreiro aceso da fileira.** O Pro não é "o card
-azul" — ele é o único painel ligado, e os outros dois são faces apagadas, mais
-escuras que a parede. Se mudar o destaque, mova a classe, não adicione cor nova.
+**Os ícones de benefício moram num pequeno módulo, não soltos.** Cada ícone em
+"Benefícios" fica dentro de `.perk__mech` — uma chapinha escura com uma luz de
+canto e um traço descendo até o texto. Se adicionar um novo benefício, mantenha
+esse wrapper; um ícone sozinho acima do título vira o cartão genérico que o
+projeto evita.
 
 **Nenhum tamanho de fonte é literal.** Toda a escala está em tokens no topo do
 `style.css` (`--fs-display` até `--fs-label`). Precisando de um tamanho novo,
